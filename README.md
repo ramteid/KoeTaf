@@ -4,20 +4,13 @@ Diese Software wurde im Rahmen eines Semesterprojektes an der Hochschule Augsbur
 
 Beteiligt waren:
 
-Antonios Fesenmeier
-
-Björn Bittner
-
-Florian Wasielewski
-
-Georg Schmid
-
-Lucas Kögl
-
-Michael Müller
-
-Dietmar Sach
-
+Antonios Fesenmeier, 
+Björn Bittner, 
+Florian Wasielewski, 
+Georg Schmid, 
+Lucas Kögl, 
+Michael Müller, 
+Dietmar Sach, 
 Patrick Vogt
 
 Dieses Werk bzw. Inhalt steht unter einer "Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 3.0 Unported"-Lizenz.
