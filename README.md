@@ -2,6 +2,8 @@ KöTaf - Ein Kundenverwaltungssystem für die Königsbrunner Tafel
 
 Diese Software wurde im Rahmen eines Semesterprojektes an der Hochschule Augsburg im Sommersemester 2013 von Studenten für die Königsbrunner Tafel entwickelt.
 
+Für ähnliche Organisationen / Zwecke kann diese Software gerne angepasst und/oder verwendet werden.
+
 Beteiligt waren:
 
 Antonios Fesenmeier, 
