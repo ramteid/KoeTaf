@@ -7,19 +7,15 @@ Features:
 - Kundenverwaltung
 - Sponsorenverwaltung
 - Mitarbeiterverwaltung
-
 - Schnellerfassung von Einnahmen von Kunden
 - Buchungsverwaltung
 - Kontensummen-Übersicht
 - Kassenabschluss mit Belegdruck
-
 - Listen: gefilterte Ausgabe von Kundeninformationen
 - Druck: spez. Kundenlisten, statische Formulare
 - Serienbriefe: Wiederverwendbare Serienbrief-Vorlagen mit Empfängerfiltern und LibreOffice-Schnittstelle
 - Statistik: Informative Zahlen über Kunden und Finanzen
-
 - Verwaltung: Serienbriefe, Backup-Wiederherstellung, Benutzer und Buchungskonten
-
 - Weitere Features: Automatische Backups, Notizen, Mehrbenutzersystem
 
 
