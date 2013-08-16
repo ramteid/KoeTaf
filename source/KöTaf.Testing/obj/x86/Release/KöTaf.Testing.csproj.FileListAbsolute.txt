@@ -1,0 +1,12 @@
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Testing\bin\Release\TafelDB.sdf
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Testing\bin\Release\KöTaf.Testing.exe.config
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Testing\bin\Release\KöTaf.Testing.exe
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Testing\bin\Release\KöTaf.Testing.pdb
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Testing\bin\Release\KöTaf.DataModel.dll
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Testing\bin\Release\KöTaf.Utils.dll
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Testing\bin\Release\CarlosAg.ExcelXmlWriter.dll
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Testing\bin\Release\Ionic.Zip.dll
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Testing\bin\Release\KöTaf.DataModel.pdb
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Testing\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Testing\obj\x86\Release\KöTaf.Testing.exe
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Testing\obj\x86\Release\KöTaf.Testing.pdb

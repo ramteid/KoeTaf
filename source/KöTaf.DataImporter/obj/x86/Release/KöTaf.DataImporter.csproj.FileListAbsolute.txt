@@ -1,0 +1,10 @@
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.DataImporter\bin\Release\TafelDB.sdf
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.DataImporter\bin\Release\KöTaf.DataImporter.exe.config
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.DataImporter\bin\Release\KöTaf.DataImporter.exe
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.DataImporter\bin\Release\KöTaf.DataImporter.pdb
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.DataImporter\bin\Release\KöTaf.DataModel.dll
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.DataImporter\bin\Release\MySql.Data.dll
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.DataImporter\bin\Release\KöTaf.DataModel.pdb
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.DataImporter\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.DataImporter\obj\x86\Release\KöTaf.DataImporter.exe
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.DataImporter\obj\x86\Release\KöTaf.DataImporter.pdb

@@ -1,0 +1,8 @@
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Utils\bin\x86\Release\TafelDB.sdf
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Utils\bin\x86\Release\KöTaf.Utils.dll
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Utils\bin\x86\Release\CarlosAg.ExcelXmlWriter.dll
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Utils\bin\x86\Release\Ionic.Zip.dll
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Utils\bin\x86\Release\KöTaf.DataModel.dll
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Utils\bin\x86\Release\KöTaf.DataModel.pdb
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Utils\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.Utils\obj\x86\Release\KöTaf.Utils.dll

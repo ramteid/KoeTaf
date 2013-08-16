@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TafelModelStoreContainer" CdmEntityContainer="TafelModelContainer">
+    <EntitySetMapping Name="Persons">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Person)">
+        <MappingFragment StoreEntitySet="Persons">
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="CountryOfBirth" ColumnName="CountryOfBirth" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="MaritalFirstName" ColumnName="MaritalFirstName" />
+          <ScalarProperty Name="MaritalLastName" ColumnName="MaritalLastName" />
+          <ScalarProperty Name="MaritalBirthday" ColumnName="MaritalBirthday" />
+          <ScalarProperty Name="MaritalNationality" ColumnName="MaritalNationality" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="LastPurchase" ColumnName="LastPurchase" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="TableNo" ColumnName="TableNo" />
+          <ScalarProperty Name="MaritalCountryOfBirth" ColumnName="MaritalCountryOfBirth" />
+          <ScalarProperty Name="MaritalMobile" ColumnName="MaritalMobile" />
+          <ScalarProperty Name="MaritalPhone" ColumnName="MaritalPhone" />
+          <ScalarProperty Name="MaritalEmail" ColumnName="MaritalEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Titles">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Title)">
+        <MappingFragment StoreEntitySet="Titles">
+          <ScalarProperty Name="TitleID" ColumnName="TitleID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FamilyStates">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.FamilyState)">
+        <MappingFragment StoreEntitySet="FamilyStates">
+          <ScalarProperty Name="FamilyStateID" ColumnName="FamilyStateID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="NumberOfPerson" ColumnName="NumberOfPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Team)">
+        <MappingFragment StoreEntitySet="Teams">
+          <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IsFormLetterAllowed" ColumnName="IsFormLetterAllowed" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamFunctions">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.TeamFunction)">
+        <MappingFragment StoreEntitySet="TeamFunctions">
+          <ScalarProperty Name="TeamFunctionID" ColumnName="TeamFunctionID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bookings">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Booking)">
+        <MappingFragment StoreEntitySet="Bookings">
+          <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsCorrection" ColumnName="IsCorrection" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RevenueTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.RevenueType)">
+        <MappingFragment StoreEntitySet="RevenueTypes">
+          <ScalarProperty Name="RevenueTypeID" ColumnName="RevenueTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserAccounts">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.UserAccount)">
+        <MappingFragment StoreEntitySet="UserAccounts">
+          <ScalarProperty Name="UserAccountID" ColumnName="UserAccountID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Children">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Child)">
+        <MappingFragment StoreEntitySet="Children">
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="IsFemale" ColumnName="IsFemale" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sponsors">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Sponsor)">
+        <MappingFragment StoreEntitySet="Sponsors">
+          <ScalarProperty Name="SponsorID" ColumnName="SponsorID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="IsFormLetterAllowed" ColumnName="IsFormLetterAllowed" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="IsCompany" ColumnName="IsCompany" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FundingTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.FundingType)">
+        <MappingFragment StoreEntitySet="FundingTypes">
+          <ScalarProperty Name="FundingTypeID" ColumnName="FundingTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notes">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Note)">
+        <MappingFragment StoreEntitySet="Notes">
+          <ScalarProperty Name="NoteID" ColumnName="NoteID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Account)">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsOfficial" ColumnName="IsOfficial" />
+          <ScalarProperty Name="ZeroPeriod" ColumnName="ZeroPeriod" />
+          <ScalarProperty Name="LatestBalance" ColumnName="LatestBalance" />
+          <ScalarProperty Name="IsFixed" ColumnName="IsFixed" />
+          <ScalarProperty Name="IsCapital" ColumnName="IsCapital" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filters">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Filter)">
+        <MappingFragment StoreEntitySet="Filters">
+          <ScalarProperty Name="FilterID" ColumnName="FilterID" />
+          <ScalarProperty Name="Table" ColumnName="Table" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FilterSets">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.FilterSet)">
+        <MappingFragment StoreEntitySet="FilterSets">
+          <ScalarProperty Name="FilterSetID" ColumnName="FilterSetID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Linking" ColumnName="Linking" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormletterPatterns">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.FormletterPattern)">
+        <MappingFragment StoreEntitySet="FormletterPatterns">
+          <ScalarProperty Name="FormletterPatternID" ColumnName="FormletterPatternID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SaluationM" ColumnName="SaluationM" />
+          <ScalarProperty Name="SaluationF" ColumnName="SaluationF" />
+          <ScalarProperty Name="SaluationNT" ColumnName="SaluationNT" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ColumnAssignments">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.ColumnAssignment)">
+        <MappingFragment StoreEntitySet="ColumnAssignments">
+          <ScalarProperty Name="ColumnAssignmentID" ColumnName="ColumnAssignmentID" />
+          <ScalarProperty Name="CsvColumn" ColumnName="CsvColumn" />
+          <ScalarProperty Name="DatabaseTable" ColumnName="DatabaseTable" />
+          <ScalarProperty Name="DatabaseColumn" ColumnName="DatabaseColumn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Revenues">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Revenue)">
+        <MappingFragment StoreEntitySet="Revenues">
+          <ScalarProperty Name="RevenueID" ColumnName="RevenueID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashClosures">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.CashClosure)">
+        <MappingFragment StoreEntitySet="CashClosures">
+          <ScalarProperty Name="CashClosureID" ColumnName="CashClosureID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="ClosureDate" ColumnName="ClosureDate" />
+          <ScalarProperty Name="Sum" ColumnName="Sum" />
+          <ScalarProperty Name="Revenue" ColumnName="Revenue" />
+          <ScalarProperty Name="Expense" ColumnName="Expense" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashClosureReports">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.CashClosureReport)">
+        <MappingFragment StoreEntitySet="CashClosureReports">
+          <ScalarProperty Name="CashClosureReportID" ColumnName="CashClosureReportID" />
+          <ScalarProperty Name="PrintDone" ColumnName="PrintDone" />
+          <ScalarProperty Name="PrintDate" ColumnName="PrintDate" />
+          <ScalarProperty Name="Done" ColumnName="Done" />
+          <ScalarProperty Name="DoneDate" ColumnName="DoneDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashClosureReceipts">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.CashClosureReceipt)">
+        <MappingFragment StoreEntitySet="CashClosureReceipts">
+          <ScalarProperty Name="CashClosureReceiptID" ColumnName="CashClosureReceiptID" />
+          <ScalarProperty Name="PrintDone" ColumnName="PrintDone" />
+          <ScalarProperty Name="PrintDate" ColumnName="PrintDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="PersonTitle" TypeName="TafelModel.PersonTitle" StoreEntitySet="Persons">
+      <EndProperty Name="Title">
+        <ScalarProperty Name="TitleID" ColumnName="Title_TitleID" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonChild" TypeName="TafelModel.PersonChild" StoreEntitySet="Children">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="Person_PersonID" />
+      </EndProperty>
+      <EndProperty Name="Child">
+        <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TeamTitle" TypeName="TafelModel.TeamTitle" StoreEntitySet="Teams">
+      <EndProperty Name="Title">
+        <ScalarProperty Name="TitleID" ColumnName="Title_TitleID" />
+      </EndProperty>
+      <EndProperty Name="Team">
+        <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TeamFunctionTeam" TypeName="TafelModel.TeamFunctionTeam" StoreEntitySet="Teams">
+      <EndProperty Name="TeamFunction">
+        <ScalarProperty Name="TeamFunctionID" ColumnName="TeamFunction_TeamFunctionID" />
+      </EndProperty>
+      <EndProperty Name="Team">
+        <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FundingTypeSponsor" TypeName="TafelModel.FundingTypeSponsor" StoreEntitySet="Sponsors">
+      <EndProperty Name="FundingType">
+        <ScalarProperty Name="FundingTypeID" ColumnName="FundingType_FundingTypeID" />
+      </EndProperty>
+      <EndProperty Name="Sponsor">
+        <ScalarProperty Name="SponsorID" ColumnName="SponsorID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TitleSponsor" TypeName="TafelModel.TitleSponsor" StoreEntitySet="Sponsors">
+      <EndProperty Name="Title">
+        <ScalarProperty Name="TitleID" ColumnName="Title_TitleID" />
+      </EndProperty>
+      <EndProperty Name="Sponsor">
+        <ScalarProperty Name="SponsorID" ColumnName="SponsorID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AdditionalRecordAccount" TypeName="TafelModel.AdditionalRecordAccount" StoreEntitySet="Bookings">
+      <EndProperty Name="Account">
+        <ScalarProperty Name="AccountID" ColumnName="SourceAccount_AccountID" />
+      </EndProperty>
+      <EndProperty Name="AdditionalRecord">
+        <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FamilyStatePerson" TypeName="TafelModel.FamilyStatePerson" StoreEntitySet="Persons">
+      <EndProperty Name="FamilyState">
+        <ScalarProperty Name="FamilyStateID" ColumnName="FamilyState_FamilyStateID" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TitlePerson" TypeName="TafelModel.TitlePerson" StoreEntitySet="Persons">
+      <EndProperty Name="Title">
+        <ScalarProperty Name="TitleID" ColumnName="MaritalTitle_TitleID" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+      </EndProperty>
+      <Condition ColumnName="MaritalTitle_TitleID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FormletterPatternFilterSet" TypeName="TafelModel.FormletterPatternFilterSet" StoreEntitySet="FilterSets">
+      <EndProperty Name="FormletterPattern">
+        <ScalarProperty Name="FormletterPatternID" ColumnName="FormletterPattern_FormletterPatternID" />
+      </EndProperty>
+      <EndProperty Name="FilterSet">
+        <ScalarProperty Name="FilterSetID" ColumnName="FilterSetID" />
+      </EndProperty>
+      <Condition ColumnName="FormletterPattern_FormletterPatternID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FilterSetFilter" TypeName="TafelModel.FilterSetFilter" StoreEntitySet="Filters">
+      <EndProperty Name="FilterSet">
+        <ScalarProperty Name="FilterSetID" ColumnName="FilterSet_FilterSetID" />
+      </EndProperty>
+      <EndProperty Name="Filter">
+        <ScalarProperty Name="FilterID" ColumnName="FilterID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FormletterPatternColumnAssignment" TypeName="TafelModel.FormletterPatternColumnAssignment" StoreEntitySet="ColumnAssignments">
+      <EndProperty Name="FormletterPattern">
+        <ScalarProperty Name="FormletterPatternID" ColumnName="FormletterPattern_FormletterPatternID" />
+      </EndProperty>
+      <EndProperty Name="ColumnAssignment">
+        <ScalarProperty Name="ColumnAssignmentID" ColumnName="ColumnAssignmentID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserAccountPerson" TypeName="TafelModel.UserAccountPerson" StoreEntitySet="Persons">
+      <EndProperty Name="UserAccount">
+        <ScalarProperty Name="UserAccountID" ColumnName="UserAccount_UserAccountID" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+      </EndProperty>
+      <Condition ColumnName="UserAccount_UserAccountID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RevenueTypeEntität1" TypeName="TafelModel.RevenueTypeEntität1" StoreEntitySet="Revenues">
+      <EndProperty Name="RevenueType">
+        <ScalarProperty Name="RevenueTypeID" ColumnName="RevenueType_RevenueTypeID" />
+      </EndProperty>
+      <EndProperty Name="Entität1">
+        <ScalarProperty Name="RevenueID" ColumnName="RevenueID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonEntität1" TypeName="TafelModel.PersonEntität1" StoreEntitySet="Revenues">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="Person_PersonID" />
+      </EndProperty>
+      <EndProperty Name="Entität1">
+        <ScalarProperty Name="RevenueID" ColumnName="RevenueID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AccountBooking" TypeName="TafelModel.AccountBooking" StoreEntitySet="Bookings">
+      <EndProperty Name="Account">
+        <ScalarProperty Name="AccountID" ColumnName="TargetAccount_AccountID" />
+      </EndProperty>
+      <EndProperty Name="Booking">
+        <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserAccountBooking" TypeName="TafelModel.UserAccountBooking" StoreEntitySet="Bookings">
+      <EndProperty Name="UserAccount">
+        <ScalarProperty Name="UserAccountID" ColumnName="UserAccount_UserAccountID" />
+      </EndProperty>
+      <EndProperty Name="Booking">
+        <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+      </EndProperty>
+      <Condition ColumnName="UserAccount_UserAccountID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserAccountCashClosure" TypeName="TafelModel.UserAccountCashClosure" StoreEntitySet="CashClosures">
+      <EndProperty Name="UserAccount">
+        <ScalarProperty Name="UserAccountID" ColumnName="ClosureUserAccount_UserAccountID" />
+      </EndProperty>
+      <EndProperty Name="CashClosure">
+        <ScalarProperty Name="CashClosureID" ColumnName="CashClosureID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CashClosureCashClosureReport" TypeName="TafelModel.CashClosureCashClosureReport" StoreEntitySet="CashClosureReports">
+      <EndProperty Name="CashClosure">
+        <ScalarProperty Name="CashClosureID" ColumnName="CashClosure_CashClosureID" />
+      </EndProperty>
+      <EndProperty Name="CashClosureReport">
+        <ScalarProperty Name="CashClosureReportID" ColumnName="CashClosureReportID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserAccountCashClosureReport" TypeName="TafelModel.UserAccountCashClosureReport" StoreEntitySet="CashClosureReports">
+      <EndProperty Name="UserAccount">
+        <ScalarProperty Name="UserAccountID" ColumnName="PrintUserAccount_UserAccountID" />
+      </EndProperty>
+      <EndProperty Name="CashClosureReport">
+        <ScalarProperty Name="CashClosureReportID" ColumnName="CashClosureReportID" />
+      </EndProperty>
+      <Condition ColumnName="PrintUserAccount_UserAccountID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserAccountCashClosureReport1" TypeName="TafelModel.UserAccountCashClosureReport1" StoreEntitySet="CashClosureReports">
+      <EndProperty Name="UserAccount">
+        <ScalarProperty Name="UserAccountID" ColumnName="DoneUserAccount_UserAccountID" />
+      </EndProperty>
+      <EndProperty Name="CashClosureReport">
+        <ScalarProperty Name="CashClosureReportID" ColumnName="CashClosureReportID" />
+      </EndProperty>
+      <Condition ColumnName="DoneUserAccount_UserAccountID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CashClosureCashClosureReceipt" TypeName="TafelModel.CashClosureCashClosureReceipt" StoreEntitySet="CashClosureReceipts">
+      <EndProperty Name="CashClosure">
+        <ScalarProperty Name="CashClosureID" ColumnName="CashClosure_CashClosureID" />
+      </EndProperty>
+      <EndProperty Name="CashClosureReceipt">
+        <ScalarProperty Name="CashClosureReceiptID" ColumnName="CashClosureReceiptID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserAccountCashClosureReceipt" TypeName="TafelModel.UserAccountCashClosureReceipt" StoreEntitySet="CashClosureReceipts">
+      <EndProperty Name="UserAccount">
+        <ScalarProperty Name="UserAccountID" ColumnName="PrintUserAccount_UserAccountID" />
+      </EndProperty>
+      <EndProperty Name="CashClosureReceipt">
+        <ScalarProperty Name="CashClosureReceiptID" ColumnName="CashClosureReceiptID" />
+      </EndProperty>
+      <Condition ColumnName="PrintUserAccount_UserAccountID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonBooking" TypeName="TafelModel.PersonBooking" StoreEntitySet="Bookings">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="Person_PersonID" />
+      </EndProperty>
+      <EndProperty Name="Booking">
+        <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+      </EndProperty>
+      <Condition ColumnName="Person_PersonID" IsNull="false" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
