@@ -36,4 +36,6 @@ Patrick Vogt
 
 Basiert auf C# .net, Compact SQL Server 4.0, LibreOffice 4
 
+Default-Zugangsdaten: ADMIN/ADMIN bzw. ADMIN/123456
+
 Dieses Werk bzw. Inhalt steht unter einer "Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 3.0 Unported"-Lizenz.
