@@ -12,7 +12,7 @@
     <StackPanel>
         <Label Name="welcomeMsg" Content="Willkommen im Kundenverwaltungssystem" />
         <Label Content="Entstanden im Rahmen einer Projektarbeit von Studenten der Hochschule Augsburg:" Margin="0,100,0,0"/>
-        <Label Content="Antonios Fesenmeier, Björn Bittner, Dietmar Sach, Florian Wasielewski, Georg Schmid, Lucas Kögl, Michael Müller, Patrick Vogt" Margin="0,0,0,0"/>
+        <Label Content="Antonios Fesenmeier, Björn Bittner, Dietmar Sach, Florian Wasielewski, Georg Schmid, Lucas Kögel, Michael Müller, Patrick Vogt" Margin="0,0,0,0"/>
         <Label Content="Lizensiert unter der Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)" Margin="0,0,0,0"/>
     </StackPanel>
 </local:KPage>
