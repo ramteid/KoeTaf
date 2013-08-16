@@ -1,0 +1,103 @@
+﻿REM Author: Michael Müller
+REM - Königsbrunner Tafel - Diese Skript muss in LibreOffice CALC unter "Makros verwalten -> zuweisen -> Ereignisse -> Dokument aktivieren" eingebunden werden.
+REM - Es muss sofort nach dem Start ausgeführt werden.
+REM - Dieses Skript ist allein nur für das Layout zuständig.
+REM    Was macht der VBA CODE ?
+REM            a) Unterscheidung zwischen Spreadsheet und normales Dokument
+REM            b) Es dreht das Dokument (Hochformat / Querformat) falls notwendig.
+REM            c) Diese Notwendigkeit wird errechnet durch das Aufsummieren der Spaltenbreite aller
+REM               beschriebenen Spalten
+REM            d) Der Code ist verantwortlich dafür das der HEADER auf jeder nachfolgenden Seite wieder
+REM               mitangezeigt wird.
+
+Sub Main
+  Dim Doc As Object
+  Dim oDoc As Object
+  Dim oSheet As Object
+  Dim tmp As Object
+  Dim searchString As String
+  Dim distance As Double
+  Dim objZelle As Object
+  Dim counter As Integer
+  Dim Col As Object
+    
+  GlobalScope.BasicLibraries.loadLibrary("Tools")
+  CurrentUrl = ThisComponent.getURL()
+  
+  Doc = ThisComponent
+  searchString = "B E R E C H T I G U N G S N A C H W E I S"  
+  'Prüfung auf Tabellen Dokument, ansonsten wird Funktion abgebrochen
+  ' das ist dann der Fall wenn keine DataSheets vorhanden sind. 
+  On Error GoTo RefErr:
+  'Prüfung auf Excel Sheet Dokument. Falls kein Excel Sheet, verlasse VBA Code.
+  tmp = Doc.Sheets(0)
+  oDoc = ThisComponent
+  oSheet = oDoc.Sheets(0)
+  'Finde Anzahl beschriebene Spalten heraus, und addiere anschliessen die 
+  'Breite der Spalten, um Festzustellen ob im Hoch - oder Querformat 
+  'gedruckt werden soll.
+  while i < 15
+   objZelle = oSheet.getCellByPosition(i, 0)
+   if (objZelle.String <> "") = 0 Then
+     i = 16
+   else
+     counter = counter + 1
+     Col = oSheet.Columns(i)
+     distance = distance + Col.Width
+   end if
+   i = i + 1
+  Wend
+  If InStr(tmp.LinkDisplayName, searchString) = 1 Then 
+  	distance = 17000
+  end if
+  Function_Landscape distance
+  
+  Dim oTitel as new com.sun.star.table.CellRangeAddress
+  'Falls es sich um den Berechtigungsnachweis handelt, müssen 
+  'die beiden ersten Zeilen auf
+  'den Folgenseiten als Header wiederholt werden
+  If InStr(tmp.LinkDisplayName, searchString) = 1 Then
+  	With oTitel
+   	 	.sheet = 0
+    	.startRow = 0
+  	    .endRow = 1
+  	End with
+  else 
+  'Wiederholung der Header auf Folgeseiten; Hier nur 1te Zeile
+  	With oTitel
+    	.sheet = 0
+    	.startRow = 0
+    	.endRow = 0
+  End with
+  End If
+  With oSheet
+    .setTitleRows(oTitel)
+    .setPrintTitleRows(True)
+  End with
+  'Function_Landscape 
+  RefErr: 
+  Exit Sub
+End Sub
+
+Sub Function_Landscape(distance As Double)
+  Dim Doc As Object
+  Dim Sheet As Object
+  Dim StyleFamilies As Object
+  Dim PageStyles As Object
+  Dim DefPage As Object
+  'Das Dokument wird gedreht; Es wird also im Querformat angezeigt.
+  'Aber nur dann wenn die Breite nicht im Hochformat angezeigt werden kann.
+  Doc = ThisComponent
+  StyleFamilies = Doc.StyleFamilies
+  PageStyles = StyleFamilies.getByName("PageStyles")
+  DefPage = PageStyles.getByName("Default")
+  if(distance < 16590) Then
+    DefPage.IsLandscape = False
+    DefPage.Width = 21000
+    DefPage.Height = 29700
+  else
+    DefPage.IsLandscape = True
+    DefPage.Width = 29700
+    DefPage.Height = 21000
+  end if
+End Sub
