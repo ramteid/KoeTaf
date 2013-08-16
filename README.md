@@ -8,7 +8,7 @@ Antonios Fesenmeier,
 Björn Bittner, 
 Florian Wasielewski, 
 Georg Schmid, 
-Lucas Kögl, 
+Lucas Kögel, 
 Michael Müller, 
 Dietmar Sach, 
 Patrick Vogt
