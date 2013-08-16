@@ -1,0 +1,42 @@
+﻿<local:KPage x:Class="KöTaf.WPFApplication.Views.Accounting.AccountManager.pNewAccount"
+    xmlns:local="clr-namespace:KöTaf.WPFApplication.Views"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    mc:Ignorable="d" 
+Title="pNewAccount">
+    
+    <StackPanel>
+        <Label Content="Kontoname" />
+        <TextBox Name="tbAccountName" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300" Margin="10,0,0,0" />
+        <Label Content="Kontonummer" />
+        <TextBox Name="tbAccountNumber" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300" Margin="10,0,0,0">
+            <TextBox.Text>
+                <Binding Path="Number">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Label Content="Kontobeschreibung" />
+        <TextBox Name="tbAccountDescription" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" AcceptsReturn="True" Width="300" Height="Auto" MinHeight="100" Margin="10,0,0,0" />
+        <WrapPanel Margin="0,5,0,5">
+            <Label Name="lbIsOfficial" Content="" Margin="0,0,10,0"/>
+            <CheckBox Name="chkbIsOfficial" VerticalAlignment="Center" IsChecked="True"/>
+        </WrapPanel>
+        <WrapPanel Margin="0,5,0,5">
+            <Label Name="lbIsCapital" Content="" Margin="0,0,10,0"/>
+            <CheckBox Name="chkbIsCapital" VerticalAlignment="Center"/>
+        </WrapPanel>
+        <WrapPanel Margin="0,5,0,5">
+            <Label Name="lbWhenZeroBilance" Content="" />
+            <ComboBox Name="cbZeroPeriod" MinWidth="150"/>
+        </WrapPanel>
+        <WrapPanel Margin="0,5,0,5">
+            <Label Name="lbFixedAccount" Content="" Margin="0,0,10,0"/>
+            <CheckBox Name="chkbIsFixAccount" VerticalAlignment="Center" Checked="chkbIsFixAccount_Checked" />
+        </WrapPanel>
+    </StackPanel>
+</local:KPage>

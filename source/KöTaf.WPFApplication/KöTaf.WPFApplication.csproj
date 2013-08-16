@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A7935354-1250-4FFE-94B7-09C32D09D61B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KöTaf.WPFApplication</RootNamespace>
+    <AssemblyName>KöTaf.WPFApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20621.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFSmartLibraryLight35, Version=0.1.41.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExternalDLL\WPFSmartLibraryLight35.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Converter\ChildConverter.cs" />
+    <Compile Include="Converter\PersonStateConverter.cs" />
+    <Compile Include="Converter\RevenueConverter.cs" />
+    <Compile Include="Helper\CashClosureHelper.cs" />
+    <Compile Include="Models\AccountManagerDataGridModel.cs" />
+    <Compile Include="Models\AccountZeroPeriodEnum.cs" />
+    <Compile Include="Helper\BookingsHelper.cs" />
+    <Compile Include="Helper\PrintForms.cs" />
+    <Compile Include="Helper\DataGridHelper.cs" />
+    <Compile Include="Helper\DataGridPaging.cs" />
+    <Compile Include="Helper\FormletterFilterData.cs" />
+    <Compile Include="Helper\MessageBoxEnhanced.cs" />
+    <Compile Include="Models\AccountComboBoxModel.cs" />
+    <Compile Include="Models\AccountSearchComboBoxItemModel.cs" />
+    <Compile Include="Models\BookingDataGridModel.cs" />
+    <Compile Include="Models\BookingSumsSearchComboBoxItemModel.cs" />
+    <Compile Include="Models\CashClosureDataGridModel.cs" />
+    <Compile Include="Models\CashClosureManagerDataGridModel.cs" />
+    <Compile Include="Models\ChildModel.cs" />
+    <Compile Include="Models\ClientSearchComboBoxItemModel.cs" />
+    <Compile Include="Models\ComboBoxItems.cs" />
+    <Compile Include="Models\FilterSetModelDB.cs" />
+    <Compile Include="Models\FormletterColumnCsvDocumentAssignment.cs" />
+    <Compile Include="Models\FormletterPatternItems.cs" />
+    <Compile Include="Models\FormletterPatternModelDB.cs" />
+    <Compile Include="Models\FormletterTableAssignment.cs" />
+    <Compile Include="Models\QuickBookingDataGridModel.cs" />
+    <Compile Include="Models\UserAccountComboBoxItemModel.cs" />
+    <Compile Include="Helper\NegativeBooking.cs" />
+    <Compile Include="Models\RevenueModel.cs" />
+    <Compile Include="Models\RevenueTypes.cs" />
+    <Compile Include="Models\SponsorSearchComboBoxItemModel.cs" />
+    <Compile Include="Models\TeamSearchComboBoxItemModel.cs" />
+    <Compile Include="Models\UserModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\FilterModel.cs" />
+    <Compile Include="Models\FilterSetModel.cs" />
+    <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Template\DateRangePanel.cs" />
+    <Compile Include="Template\ExtScrollViewer.cs" />
+    <Compile Include="Template\PagingBar.cs" />
+    <Compile Include="Template\SubnavigationPage.cs" />
+    <Compile Include="Views\Accounting\Bookings\pEditBooking.xaml.cs">
+      <DependentUpon>pEditBooking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Accounting\Bookings\pNewBooking.xaml.cs">
+      <DependentUpon>pNewBooking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Accounting\CashClosureManager\pCashClosureManager.xaml.cs">
+      <DependentUpon>pCashClosureManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Accounting\CashClosureManager\pCashClosureSubmit.xaml.cs">
+      <DependentUpon>pCashClosureSubmit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Accounting\QuickBooking\pQuickBooking.xaml.cs">
+      <DependentUpon>pQuickBooking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Accounting\Sums\pSums.xaml.cs">
+      <DependentUpon>pSums.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\pEditClientRevenues.xaml.cs">
+      <DependentUpon>pEditClientRevenues.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\pEditClientPerson.xaml.cs">
+      <DependentUpon>pEditClientPerson.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\pEditClientPartnerChild.xaml.cs">
+      <DependentUpon>pEditClientPartnerChild.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\pNewClientPartnerChild.xaml.cs">
+      <DependentUpon>pNewClientPartnerChild.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\pNewClientPerson.xaml.cs">
+      <DependentUpon>pNewClientPerson.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\pNewClientRevenues.xaml.cs">
+      <DependentUpon>pNewClientRevenues.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Formletter\pFormletterDelete.xaml.cs">
+      <DependentUpon>pFormletterDelete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Formletter\pFormletterPrintDetail.xaml.cs">
+      <DependentUpon>pFormletterPrintDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Formletter\pFormletterPrint.xaml.cs">
+      <DependentUpon>pFormletterPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KPage.xaml.cs">
+      <DependentUpon>KPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Examples.cs" />
+    <Compile Include="Template\ScrollableFrame.cs" />
+    <Compile Include="Template\SearchPanel.cs" />
+    <Compile Include="Template\SimpleTabItem.cs" />
+    <Compile Include="Template\SinglePage.cs" />
+    <Compile Include="Template\SubNavigationButton.cs" />
+    <Compile Include="Template\Toolbar.cs" />
+    <Compile Include="Views\Accounting\AccountManager\pAccountManager.xaml.cs">
+      <DependentUpon>pAccountManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Accounting\AccountManager\pEditAccount.xaml.cs">
+      <DependentUpon>pEditAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Accounting\AccountManager\pNewAccount.xaml.cs">
+      <DependentUpon>pNewAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Accounting\Bookings\pBookings.xaml.cs">
+      <DependentUpon>pBookings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CloseProgram.xaml.cs">
+      <DependentUpon>CloseProgram.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Formletter\pFormletterAdministration.xaml.cs">
+      <DependentUpon>pFormletterAdministration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Formletter\pFormletterFileLinking.xaml.cs">
+      <DependentUpon>pFormletterFileLinking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Formletter\pFormletterFilterSelection.xaml.cs">
+      <DependentUpon>pFormletterFilterSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Formletter\pFormletterTextFields.xaml.cs">
+      <DependentUpon>pFormletterTextFields.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Note\pNewNote.xaml.cs">
+      <DependentUpon>pNewNote.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Note\pEditNote.xaml.cs">
+      <DependentUpon>pEditNote.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Print.xaml.cs">
+      <DependentUpon>Print.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Restore.xaml.cs">
+      <DependentUpon>Restore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sponsor\pNewSponsor.xaml.cs">
+      <DependentUpon>pNewSponsor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sponsor\pEditSponsor.xaml.cs">
+      <DependentUpon>pEditSponsor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\pClientAdministration.xaml.cs">
+      <DependentUpon>pClientAdministration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Statistic\OldpStatistiken.xaml.cs">
+      <DependentUpon>OldpStatistiken.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\pAccessDenied.xaml.cs">
+      <DependentUpon>pAccessDenied.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\pAnyLists.xaml.cs">
+      <DependentUpon>pAnyLists.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\pDisplayedData.xaml.cs">
+      <DependentUpon>pDisplayedData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Statistic\pGeneralStatistic.xaml.cs">
+      <DependentUpon>pGeneralStatistic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\pSavedLists.xaml.cs">
+      <DependentUpon>pSavedLists.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Team\pEditTeamMember.xaml.cs">
+      <DependentUpon>pEditTeamMember.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Team\pNewTeamMember.xaml.cs">
+      <DependentUpon>pNewTeamMember.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sponsor\pSponsorAdministration.xaml.cs">
+      <DependentUpon>pSponsorAdministration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lists\pLists.xaml.cs">
+      <DependentUpon>pLists.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Note\pNoteAdministration.xaml.cs">
+      <DependentUpon>pNoteAdministration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Team\pTeamAdministration.xaml.cs">
+      <DependentUpon>pTeamAdministration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\pWelcomeScreen.xaml.cs">
+      <DependentUpon>pWelcomeScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashWindow.xaml.cs">
+      <DependentUpon>SplashWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\USB_Identification.xaml.cs">
+      <DependentUpon>USB_Identification.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\pUserManager.xaml.cs">
+      <DependentUpon>pUserManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\pEditUser.xaml.cs">
+      <DependentUpon>pEditUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\pNewUser.xaml.cs">
+      <DependentUpon>pNewUser.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ResourceDictionaries\LoginDialogRD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Accounting\Bookings\pEditBooking.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Accounting\Bookings\pNewBooking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Accounting\CashClosureManager\pCashClosureManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Accounting\CashClosureManager\pCashClosureSubmit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Accounting\QuickBooking\pQuickBooking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Accounting\Sums\pSums.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Client\pEditClientRevenues.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Client\pEditClientPerson.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Client\pEditClientPartnerChild.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Client\pNewClientPartnerChild.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Client\pNewClientPerson.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Client\pNewClientRevenues.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Formletter\pFormletterDelete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Formletter\pFormletterPrintDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Formletter\pFormletterPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Accounting\AccountManager\pAccountManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Accounting\AccountManager\pEditAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Accounting\AccountManager\pNewAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Accounting\Bookings\pBookings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CloseProgram.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Formletter\pFormletterAdministration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Formletter\pFormletterFileLinking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Formletter\pFormletterFilterSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Formletter\pFormletterTextFields.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Note\pNewNote.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Note\pEditNote.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Print.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Restore.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sponsor\pNewSponsor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sponsor\pEditSponsor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Client\pClientAdministration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Statistic\OldpStatistiken.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Lists\pAccessDenied.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Lists\pAnyLists.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Lists\pDisplayedData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Statistic\pGeneralStatistic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Lists\pSavedLists.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Team\pEditTeamMember.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Team\pNewTeamMember.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sponsor\pSponsorAdministration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lists\pLists.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Note\pNoteAdministration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Team\pTeamAdministration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\pWelcomeScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\USB_Identification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\User\pUserManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\User\pEditUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\User\pNewUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="documents\serienbrief_vorlagen\firstFormletter.csv" />
+    <None Include="documents\serienbrief_vorlagen\firstFormletter.odb" />
+    <None Include="documents\serienbrief_vorlagen\firstFormletter.odt" />
+    <None Include="documents\statische_dokumente\Aufnahmeformular.odt" />
+    <None Include="documents\statische_dokumente\CaritasDienste.odt" />
+    <None Include="documents\statische_dokumente\Haftungsausschluss.odt" />
+    <None Include="documents\statische_dokumente\Kassenabrechnung.odt" />
+    <None Include="documents\statische_dokumente\Kassenabschlussbeleg.odt" />
+    <None Include="documents\statische_dokumente\Spendeneinreicher.odt" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KöTaf.DataModel\KöTaf.DataModel.csproj">
+      <Project>{8AAAC962-AE75-49FB-9F4F-4645F29418A7}</Project>
+      <Name>KöTaf.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KöTaf.Utils\KöTaf.Utils.csproj">
+      <Project>{A43B4CE1-07B3-4D57-B542-5EE85D32B88B}</Project>
+      <Name>KöTaf.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BlendEmbeddedFont Include="Fonts\arial.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\arialbd.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\arialbi.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\ariali.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </BlendEmbeddedFont>
+    <Resource Include="Images\Koala.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExternalDLL\WPFSmartLibraryLight35.dll" />
+    <Resource Include="Images\printer.png" />
+    <Resource Include="Images\icon-account.png" />
+    <Resource Include="Images\icon-eraser.png" />
+    <Resource Include="Images\logo.ico" />
+    <Resource Include="Images\logo.PNG" />
+    <Resource Include="Images\KT_Splash.jpg" />
+    <Resource Include="Images\activate.png" />
+    <Resource Include="Images\deactivate.png" />
+    <Resource Include="Images\delete.png" />
+    <Resource Include="Images\edit.png" />
+    <Resource Include="Images\KT.png" />
+    <Resource Include="Images\edit-4.png" />
+    <Resource Include="Images\add2.png" />
+    <Resource Include="Images\KT_Login_Logo.jpg" />
+    <Resource Include="Images\backup.jpg" />
+    <Resource Include="Images\CircularLoading.png" />
+    <Resource Include="Images\db1.png" />
+    <Resource Include="Images\db2.png" />
+    <Resource Include="Images\db3.png" />
+    <Resource Include="Images\db_comit.png" />
+    <Resource Include="Images\db_update.png" />
+    <Resource Include="Images\floppy.png" />
+    <Resource Include="Images\ok1.png" />
+    <Resource Include="Images\agenda.png" />
+    <Resource Include="Images\add1.png" />
+    <Resource Include="Images\kjobviewer.png" />
+    <Resource Include="Images\bl.png" />
+    <Resource Include="Images\BlueStart.ico" />
+    <Resource Include="Images\KB.PNG" />
+    <Resource Include="Images\kg.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>del "$(TargetDir)" /F /S /Q</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)documents" "$(TargetDir)documents" /E /C /I /R /Y
+xcopy "$(ProjectDir)Images" "$(TargetDir)Images" /E /C /I /R /Y
+copy "$(ProjectDir)config.ini" /A /Y "$(TargetDir)config.ini" /A</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

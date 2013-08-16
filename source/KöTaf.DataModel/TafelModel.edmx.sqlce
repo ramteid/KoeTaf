@@ -1,0 +1,854 @@
+
+-- --------------------------------------------------
+-- Entity Designer DDL Script for SQL Server Compact Edition
+-- --------------------------------------------------
+-- Date Created: 07/21/2013 18:43:05
+-- Generated from EDMX file: D:\_FACHHOCHSCHULE\6. Semester\KöTaf\src\KöTaf.DataModel\TafelModel.edmx
+-- --------------------------------------------------
+
+
+-- --------------------------------------------------
+-- Dropping existing FOREIGN KEY constraints
+-- NOTE: if the constraint does not exist, an ignorable error will be reported.
+-- --------------------------------------------------
+
+    ALTER TABLE [Persons] DROP CONSTRAINT [FK_PersonTitle];
+GO
+    ALTER TABLE [Children] DROP CONSTRAINT [FK_PersonChild];
+GO
+    ALTER TABLE [Teams] DROP CONSTRAINT [FK_TeamTitle];
+GO
+    ALTER TABLE [Teams] DROP CONSTRAINT [FK_TeamFunctionTeam];
+GO
+    ALTER TABLE [Sponsors] DROP CONSTRAINT [FK_FundingTypeSponsor];
+GO
+    ALTER TABLE [Sponsors] DROP CONSTRAINT [FK_TitleSponsor];
+GO
+    ALTER TABLE [Bookings] DROP CONSTRAINT [FK_AdditionalRecordAccount];
+GO
+    ALTER TABLE [Persons] DROP CONSTRAINT [FK_FamilyStatePerson];
+GO
+    ALTER TABLE [Persons] DROP CONSTRAINT [FK_TitlePerson];
+GO
+    ALTER TABLE [FilterSets] DROP CONSTRAINT [FK_FormletterPatternFilterSet];
+GO
+    ALTER TABLE [Filters] DROP CONSTRAINT [FK_FilterSetFilter];
+GO
+    ALTER TABLE [ColumnAssignments] DROP CONSTRAINT [FK_FormletterPatternColumnAssignment];
+GO
+    ALTER TABLE [Persons] DROP CONSTRAINT [FK_UserAccountPerson];
+GO
+    ALTER TABLE [Revenues] DROP CONSTRAINT [FK_RevenueTypeEntität1];
+GO
+    ALTER TABLE [Revenues] DROP CONSTRAINT [FK_PersonEntität1];
+GO
+    ALTER TABLE [Bookings] DROP CONSTRAINT [FK_AccountBooking];
+GO
+    ALTER TABLE [Bookings] DROP CONSTRAINT [FK_UserAccountBooking];
+GO
+    ALTER TABLE [CashClosures] DROP CONSTRAINT [FK_UserAccountCashClosure];
+GO
+    ALTER TABLE [CashClosureReports] DROP CONSTRAINT [FK_CashClosureCashClosureReport];
+GO
+    ALTER TABLE [CashClosureReports] DROP CONSTRAINT [FK_UserAccountCashClosureReport];
+GO
+    ALTER TABLE [CashClosureReports] DROP CONSTRAINT [FK_UserAccountCashClosureReport1];
+GO
+    ALTER TABLE [CashClosureReceipts] DROP CONSTRAINT [FK_CashClosureCashClosureReceipt];
+GO
+    ALTER TABLE [CashClosureReceipts] DROP CONSTRAINT [FK_UserAccountCashClosureReceipt];
+GO
+    ALTER TABLE [Bookings] DROP CONSTRAINT [FK_PersonBooking];
+GO
+
+-- --------------------------------------------------
+-- Dropping existing tables
+-- NOTE: if the table does not exist, an ignorable error will be reported.
+-- --------------------------------------------------
+
+    DROP TABLE [Persons];
+GO
+    DROP TABLE [Titles];
+GO
+    DROP TABLE [FamilyStates];
+GO
+    DROP TABLE [Teams];
+GO
+    DROP TABLE [TeamFunctions];
+GO
+    DROP TABLE [Bookings];
+GO
+    DROP TABLE [RevenueTypes];
+GO
+    DROP TABLE [UserAccounts];
+GO
+    DROP TABLE [Children];
+GO
+    DROP TABLE [Sponsors];
+GO
+    DROP TABLE [FundingTypes];
+GO
+    DROP TABLE [Notes];
+GO
+    DROP TABLE [Accounts];
+GO
+    DROP TABLE [Filters];
+GO
+    DROP TABLE [FilterSets];
+GO
+    DROP TABLE [FormletterPatterns];
+GO
+    DROP TABLE [ColumnAssignments];
+GO
+    DROP TABLE [Revenues];
+GO
+    DROP TABLE [CashClosures];
+GO
+    DROP TABLE [CashClosureReports];
+GO
+    DROP TABLE [CashClosureReceipts];
+GO
+
+-- --------------------------------------------------
+-- Creating all tables
+-- --------------------------------------------------
+
+-- Creating table 'Persons'
+CREATE TABLE [Persons] (
+    [PersonID] int IDENTITY(1,1) NOT NULL,
+    [FirstName] nvarchar(4000)  NOT NULL,
+    [LastName] nvarchar(4000)  NOT NULL,
+    [Street] nvarchar(4000)  NOT NULL,
+    [Nationality] nvarchar(4000)  NOT NULL,
+    [DateOfBirth] datetime  NOT NULL,
+    [CountryOfBirth] nvarchar(4000)  NULL,
+    [IsActive] bit  NOT NULL,
+    [Group] int  NOT NULL,
+    [ZipCode] int  NOT NULL,
+    [ValidityStart] datetime  NOT NULL,
+    [ValidityEnd] datetime  NOT NULL,
+    [Email] nvarchar(4000)  NULL,
+    [MobileNo] nvarchar(4000)  NULL,
+    [Phone] nvarchar(4000)  NULL,
+    [MaritalFirstName] nvarchar(4000)  NULL,
+    [MaritalLastName] nvarchar(4000)  NULL,
+    [MaritalBirthday] datetime  NULL,
+    [MaritalNationality] nvarchar(4000)  NULL,
+    [CreationDate] datetime  NOT NULL,
+    [LastPurchase] datetime  NULL,
+    [LastModified] datetime  NULL,
+    [Comment] nvarchar(4000)  NULL,
+    [City] nvarchar(4000)  NOT NULL,
+    [TableNo] int  NULL,
+    [MaritalCountryOfBirth] nvarchar(4000)  NULL,
+    [MaritalMobile] nvarchar(4000)  NULL,
+    [MaritalPhone] nvarchar(4000)  NULL,
+    [MaritalEmail] nvarchar(4000)  NULL,
+    [Title_TitleID] int  NOT NULL,
+    [FamilyState_FamilyStateID] int  NOT NULL,
+    [MaritalTitle_TitleID] int  NULL,
+    [UserAccount_UserAccountID] int  NULL
+);
+GO
+
+-- Creating table 'Titles'
+CREATE TABLE [Titles] (
+    [TitleID] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL
+);
+GO
+
+-- Creating table 'FamilyStates'
+CREATE TABLE [FamilyStates] (
+    [FamilyStateID] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL,
+    [ShortName] nvarchar(4000)  NOT NULL,
+    [NumberOfPerson] int  NULL
+);
+GO
+
+-- Creating table 'Teams'
+CREATE TABLE [Teams] (
+    [TeamID] int IDENTITY(1,1) NOT NULL,
+    [FirstName] nvarchar(4000)  NOT NULL,
+    [LastName] nvarchar(4000)  NOT NULL,
+    [IsActive] bit  NOT NULL,
+    [Street] nvarchar(4000)  NOT NULL,
+    [ZipCode] int  NOT NULL,
+    [City] nvarchar(4000)  NOT NULL,
+    [MobileNo] nvarchar(4000)  NULL,
+    [PhoneNo] nvarchar(4000)  NULL,
+    [Email] nvarchar(4000)  NULL,
+    [IsFormLetterAllowed] bit  NOT NULL,
+    [DateOfBirth] datetime  NOT NULL,
+    [Title_TitleID] int  NOT NULL,
+    [TeamFunction_TeamFunctionID] int  NOT NULL
+);
+GO
+
+-- Creating table 'TeamFunctions'
+CREATE TABLE [TeamFunctions] (
+    [TeamFunctionID] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL
+);
+GO
+
+-- Creating table 'Bookings'
+CREATE TABLE [Bookings] (
+    [BookingID] int IDENTITY(1,1) NOT NULL,
+    [Amount] float  NOT NULL,
+    [Date] datetime  NOT NULL,
+    [Description] nvarchar(4000)  NULL,
+    [IsCorrection] bit  NOT NULL,
+    [SourceAccount_AccountID] int  NOT NULL,
+    [TargetAccount_AccountID] int  NOT NULL,
+    [UserAccount_UserAccountID] int  NULL,
+    [Person_PersonID] int  NULL
+);
+GO
+
+-- Creating table 'RevenueTypes'
+CREATE TABLE [RevenueTypes] (
+    [RevenueTypeID] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL
+);
+GO
+
+-- Creating table 'UserAccounts'
+CREATE TABLE [UserAccounts] (
+    [UserAccountID] int IDENTITY(1,1) NOT NULL,
+    [Username] nvarchar(4000)  NOT NULL,
+    [Password] nvarchar(4000)  NOT NULL,
+    [IsAdmin] bit  NOT NULL,
+    [ImageName] nvarchar(4000)  NULL,
+    [IsActive] bit  NOT NULL
+);
+GO
+
+-- Creating table 'Children'
+CREATE TABLE [Children] (
+    [ChildID] int IDENTITY(1,1) NOT NULL,
+    [FirstName] nvarchar(4000)  NOT NULL,
+    [LastName] nvarchar(4000)  NOT NULL,
+    [DateOfBirth] datetime  NOT NULL,
+    [IsFemale] bit  NOT NULL,
+    [LastModified] datetime  NULL,
+    [Person_PersonID] int  NOT NULL
+);
+GO
+
+-- Creating table 'Sponsors'
+CREATE TABLE [Sponsors] (
+    [SponsorID] int IDENTITY(1,1) NOT NULL,
+    [IsActive] bit  NOT NULL,
+    [Street] nvarchar(4000)  NOT NULL,
+    [City] nvarchar(4000)  NOT NULL,
+    [ZipCode] int  NOT NULL,
+    [FirstName] nvarchar(4000)  NOT NULL,
+    [LastName] nvarchar(4000)  NOT NULL,
+    [MobileNo] nvarchar(4000)  NULL,
+    [PhoneNo] nvarchar(4000)  NULL,
+    [FaxNo] nvarchar(4000)  NULL,
+    [Email] nvarchar(4000)  NULL,
+    [ContactPerson] nvarchar(4000)  NULL,
+    [IsFormLetterAllowed] bit  NOT NULL,
+    [LastModified] datetime  NULL,
+    [CompanyName] nvarchar(4000)  NULL,
+    [IsCompany] bit  NOT NULL,
+    [FundingType_FundingTypeID] int  NOT NULL,
+    [Title_TitleID] int  NOT NULL
+);
+GO
+
+-- Creating table 'FundingTypes'
+CREATE TABLE [FundingTypes] (
+    [FundingTypeID] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL
+);
+GO
+
+-- Creating table 'Notes'
+CREATE TABLE [Notes] (
+    [NoteID] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL,
+    [Description] nvarchar(4000)  NOT NULL,
+    [CreationDate] datetime  NOT NULL
+);
+GO
+
+-- Creating table 'Accounts'
+CREATE TABLE [Accounts] (
+    [AccountID] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL,
+    [Number] int  NOT NULL,
+    [Description] nvarchar(4000)  NULL,
+    [IsOfficial] bit  NOT NULL,
+    [ZeroPeriod] int  NOT NULL,
+    [LatestBalance] float  NOT NULL,
+    [IsFixed] bit  NOT NULL,
+    [IsCapital] bit  NOT NULL
+);
+GO
+
+-- Creating table 'Filters'
+CREATE TABLE [Filters] (
+    [FilterID] int IDENTITY(1,1) NOT NULL,
+    [Table] nvarchar(4000)  NOT NULL,
+    [Type] nvarchar(4000)  NOT NULL,
+    [Operation] nvarchar(4000)  NOT NULL,
+    [Value] nvarchar(4000)  NOT NULL,
+    [FilterSet_FilterSetID] int  NOT NULL
+);
+GO
+
+-- Creating table 'FilterSets'
+CREATE TABLE [FilterSets] (
+    [FilterSetID] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL,
+    [Linking] nvarchar(4000)  NOT NULL,
+    [FormletterPattern_FormletterPatternID] int  NULL
+);
+GO
+
+-- Creating table 'FormletterPatterns'
+CREATE TABLE [FormletterPatterns] (
+    [FormletterPatternID] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL,
+    [SaluationM] nvarchar(4000)  NOT NULL,
+    [SaluationF] nvarchar(4000)  NOT NULL,
+    [SaluationNT] nvarchar(4000)  NOT NULL,
+    [FileName] nvarchar(4000)  NOT NULL,
+    [Text] nvarchar(4000)  NOT NULL
+);
+GO
+
+-- Creating table 'ColumnAssignments'
+CREATE TABLE [ColumnAssignments] (
+    [ColumnAssignmentID] int IDENTITY(1,1) NOT NULL,
+    [CsvColumn] nvarchar(4000)  NOT NULL,
+    [DatabaseTable] nvarchar(4000)  NOT NULL,
+    [DatabaseColumn] nvarchar(4000)  NOT NULL,
+    [FormletterPattern_FormletterPatternID] int  NOT NULL
+);
+GO
+
+-- Creating table 'Revenues'
+CREATE TABLE [Revenues] (
+    [RevenueID] int IDENTITY(1,1) NOT NULL,
+    [Amount] float  NOT NULL,
+    [StartDate] datetime  NOT NULL,
+    [EndDate] datetime  NULL,
+    [Description] nvarchar(4000)  NULL,
+    [RevenueType_RevenueTypeID] int  NOT NULL,
+    [Person_PersonID] int  NOT NULL
+);
+GO
+
+-- Creating table 'CashClosures'
+CREATE TABLE [CashClosures] (
+    [CashClosureID] int IDENTITY(1,1) NOT NULL,
+    [Comment] nvarchar(4000)  NULL,
+    [ClosureDate] datetime  NOT NULL,
+    [Sum] float  NOT NULL,
+    [Revenue] float  NOT NULL,
+    [Expense] float  NOT NULL,
+    [ClosureUserAccount_UserAccountID] int  NOT NULL
+);
+GO
+
+-- Creating table 'CashClosureReports'
+CREATE TABLE [CashClosureReports] (
+    [CashClosureReportID] int IDENTITY(1,1) NOT NULL,
+    [PrintDone] bit  NOT NULL,
+    [PrintDate] datetime  NULL,
+    [Done] bit  NOT NULL,
+    [DoneDate] datetime  NULL,
+    [CashClosure_CashClosureID] int  NOT NULL,
+    [PrintUserAccount_UserAccountID] int  NULL,
+    [DoneUserAccount_UserAccountID] int  NULL
+);
+GO
+
+-- Creating table 'CashClosureReceipts'
+CREATE TABLE [CashClosureReceipts] (
+    [CashClosureReceiptID] int IDENTITY(1,1) NOT NULL,
+    [PrintDone] bit  NOT NULL,
+    [PrintDate] datetime  NULL,
+    [CashClosure_CashClosureID] int  NOT NULL,
+    [PrintUserAccount_UserAccountID] int  NULL
+);
+GO
+
+-- --------------------------------------------------
+-- Creating all PRIMARY KEY constraints
+-- --------------------------------------------------
+
+-- Creating primary key on [PersonID] in table 'Persons'
+ALTER TABLE [Persons]
+ADD CONSTRAINT [PK_Persons]
+    PRIMARY KEY ([PersonID] );
+GO
+
+-- Creating primary key on [TitleID] in table 'Titles'
+ALTER TABLE [Titles]
+ADD CONSTRAINT [PK_Titles]
+    PRIMARY KEY ([TitleID] );
+GO
+
+-- Creating primary key on [FamilyStateID] in table 'FamilyStates'
+ALTER TABLE [FamilyStates]
+ADD CONSTRAINT [PK_FamilyStates]
+    PRIMARY KEY ([FamilyStateID] );
+GO
+
+-- Creating primary key on [TeamID] in table 'Teams'
+ALTER TABLE [Teams]
+ADD CONSTRAINT [PK_Teams]
+    PRIMARY KEY ([TeamID] );
+GO
+
+-- Creating primary key on [TeamFunctionID] in table 'TeamFunctions'
+ALTER TABLE [TeamFunctions]
+ADD CONSTRAINT [PK_TeamFunctions]
+    PRIMARY KEY ([TeamFunctionID] );
+GO
+
+-- Creating primary key on [BookingID] in table 'Bookings'
+ALTER TABLE [Bookings]
+ADD CONSTRAINT [PK_Bookings]
+    PRIMARY KEY ([BookingID] );
+GO
+
+-- Creating primary key on [RevenueTypeID] in table 'RevenueTypes'
+ALTER TABLE [RevenueTypes]
+ADD CONSTRAINT [PK_RevenueTypes]
+    PRIMARY KEY ([RevenueTypeID] );
+GO
+
+-- Creating primary key on [UserAccountID] in table 'UserAccounts'
+ALTER TABLE [UserAccounts]
+ADD CONSTRAINT [PK_UserAccounts]
+    PRIMARY KEY ([UserAccountID] );
+GO
+
+-- Creating primary key on [ChildID] in table 'Children'
+ALTER TABLE [Children]
+ADD CONSTRAINT [PK_Children]
+    PRIMARY KEY ([ChildID] );
+GO
+
+-- Creating primary key on [SponsorID] in table 'Sponsors'
+ALTER TABLE [Sponsors]
+ADD CONSTRAINT [PK_Sponsors]
+    PRIMARY KEY ([SponsorID] );
+GO
+
+-- Creating primary key on [FundingTypeID] in table 'FundingTypes'
+ALTER TABLE [FundingTypes]
+ADD CONSTRAINT [PK_FundingTypes]
+    PRIMARY KEY ([FundingTypeID] );
+GO
+
+-- Creating primary key on [NoteID] in table 'Notes'
+ALTER TABLE [Notes]
+ADD CONSTRAINT [PK_Notes]
+    PRIMARY KEY ([NoteID] );
+GO
+
+-- Creating primary key on [AccountID] in table 'Accounts'
+ALTER TABLE [Accounts]
+ADD CONSTRAINT [PK_Accounts]
+    PRIMARY KEY ([AccountID] );
+GO
+
+-- Creating primary key on [FilterID] in table 'Filters'
+ALTER TABLE [Filters]
+ADD CONSTRAINT [PK_Filters]
+    PRIMARY KEY ([FilterID] );
+GO
+
+-- Creating primary key on [FilterSetID] in table 'FilterSets'
+ALTER TABLE [FilterSets]
+ADD CONSTRAINT [PK_FilterSets]
+    PRIMARY KEY ([FilterSetID] );
+GO
+
+-- Creating primary key on [FormletterPatternID] in table 'FormletterPatterns'
+ALTER TABLE [FormletterPatterns]
+ADD CONSTRAINT [PK_FormletterPatterns]
+    PRIMARY KEY ([FormletterPatternID] );
+GO
+
+-- Creating primary key on [ColumnAssignmentID] in table 'ColumnAssignments'
+ALTER TABLE [ColumnAssignments]
+ADD CONSTRAINT [PK_ColumnAssignments]
+    PRIMARY KEY ([ColumnAssignmentID] );
+GO
+
+-- Creating primary key on [RevenueID] in table 'Revenues'
+ALTER TABLE [Revenues]
+ADD CONSTRAINT [PK_Revenues]
+    PRIMARY KEY ([RevenueID] );
+GO
+
+-- Creating primary key on [CashClosureID] in table 'CashClosures'
+ALTER TABLE [CashClosures]
+ADD CONSTRAINT [PK_CashClosures]
+    PRIMARY KEY ([CashClosureID] );
+GO
+
+-- Creating primary key on [CashClosureReportID] in table 'CashClosureReports'
+ALTER TABLE [CashClosureReports]
+ADD CONSTRAINT [PK_CashClosureReports]
+    PRIMARY KEY ([CashClosureReportID] );
+GO
+
+-- Creating primary key on [CashClosureReceiptID] in table 'CashClosureReceipts'
+ALTER TABLE [CashClosureReceipts]
+ADD CONSTRAINT [PK_CashClosureReceipts]
+    PRIMARY KEY ([CashClosureReceiptID] );
+GO
+
+-- --------------------------------------------------
+-- Creating all FOREIGN KEY constraints
+-- --------------------------------------------------
+
+-- Creating foreign key on [Title_TitleID] in table 'Persons'
+ALTER TABLE [Persons]
+ADD CONSTRAINT [FK_PersonTitle]
+    FOREIGN KEY ([Title_TitleID])
+    REFERENCES [Titles]
+        ([TitleID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PersonTitle'
+CREATE INDEX [IX_FK_PersonTitle]
+ON [Persons]
+    ([Title_TitleID]);
+GO
+
+-- Creating foreign key on [Person_PersonID] in table 'Children'
+ALTER TABLE [Children]
+ADD CONSTRAINT [FK_PersonChild]
+    FOREIGN KEY ([Person_PersonID])
+    REFERENCES [Persons]
+        ([PersonID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PersonChild'
+CREATE INDEX [IX_FK_PersonChild]
+ON [Children]
+    ([Person_PersonID]);
+GO
+
+-- Creating foreign key on [Title_TitleID] in table 'Teams'
+ALTER TABLE [Teams]
+ADD CONSTRAINT [FK_TeamTitle]
+    FOREIGN KEY ([Title_TitleID])
+    REFERENCES [Titles]
+        ([TitleID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_TeamTitle'
+CREATE INDEX [IX_FK_TeamTitle]
+ON [Teams]
+    ([Title_TitleID]);
+GO
+
+-- Creating foreign key on [TeamFunction_TeamFunctionID] in table 'Teams'
+ALTER TABLE [Teams]
+ADD CONSTRAINT [FK_TeamFunctionTeam]
+    FOREIGN KEY ([TeamFunction_TeamFunctionID])
+    REFERENCES [TeamFunctions]
+        ([TeamFunctionID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_TeamFunctionTeam'
+CREATE INDEX [IX_FK_TeamFunctionTeam]
+ON [Teams]
+    ([TeamFunction_TeamFunctionID]);
+GO
+
+-- Creating foreign key on [FundingType_FundingTypeID] in table 'Sponsors'
+ALTER TABLE [Sponsors]
+ADD CONSTRAINT [FK_FundingTypeSponsor]
+    FOREIGN KEY ([FundingType_FundingTypeID])
+    REFERENCES [FundingTypes]
+        ([FundingTypeID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_FundingTypeSponsor'
+CREATE INDEX [IX_FK_FundingTypeSponsor]
+ON [Sponsors]
+    ([FundingType_FundingTypeID]);
+GO
+
+-- Creating foreign key on [Title_TitleID] in table 'Sponsors'
+ALTER TABLE [Sponsors]
+ADD CONSTRAINT [FK_TitleSponsor]
+    FOREIGN KEY ([Title_TitleID])
+    REFERENCES [Titles]
+        ([TitleID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_TitleSponsor'
+CREATE INDEX [IX_FK_TitleSponsor]
+ON [Sponsors]
+    ([Title_TitleID]);
+GO
+
+-- Creating foreign key on [SourceAccount_AccountID] in table 'Bookings'
+ALTER TABLE [Bookings]
+ADD CONSTRAINT [FK_AdditionalRecordAccount]
+    FOREIGN KEY ([SourceAccount_AccountID])
+    REFERENCES [Accounts]
+        ([AccountID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_AdditionalRecordAccount'
+CREATE INDEX [IX_FK_AdditionalRecordAccount]
+ON [Bookings]
+    ([SourceAccount_AccountID]);
+GO
+
+-- Creating foreign key on [FamilyState_FamilyStateID] in table 'Persons'
+ALTER TABLE [Persons]
+ADD CONSTRAINT [FK_FamilyStatePerson]
+    FOREIGN KEY ([FamilyState_FamilyStateID])
+    REFERENCES [FamilyStates]
+        ([FamilyStateID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_FamilyStatePerson'
+CREATE INDEX [IX_FK_FamilyStatePerson]
+ON [Persons]
+    ([FamilyState_FamilyStateID]);
+GO
+
+-- Creating foreign key on [MaritalTitle_TitleID] in table 'Persons'
+ALTER TABLE [Persons]
+ADD CONSTRAINT [FK_TitlePerson]
+    FOREIGN KEY ([MaritalTitle_TitleID])
+    REFERENCES [Titles]
+        ([TitleID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_TitlePerson'
+CREATE INDEX [IX_FK_TitlePerson]
+ON [Persons]
+    ([MaritalTitle_TitleID]);
+GO
+
+-- Creating foreign key on [FormletterPattern_FormletterPatternID] in table 'FilterSets'
+ALTER TABLE [FilterSets]
+ADD CONSTRAINT [FK_FormletterPatternFilterSet]
+    FOREIGN KEY ([FormletterPattern_FormletterPatternID])
+    REFERENCES [FormletterPatterns]
+        ([FormletterPatternID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_FormletterPatternFilterSet'
+CREATE INDEX [IX_FK_FormletterPatternFilterSet]
+ON [FilterSets]
+    ([FormletterPattern_FormletterPatternID]);
+GO
+
+-- Creating foreign key on [FilterSet_FilterSetID] in table 'Filters'
+ALTER TABLE [Filters]
+ADD CONSTRAINT [FK_FilterSetFilter]
+    FOREIGN KEY ([FilterSet_FilterSetID])
+    REFERENCES [FilterSets]
+        ([FilterSetID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_FilterSetFilter'
+CREATE INDEX [IX_FK_FilterSetFilter]
+ON [Filters]
+    ([FilterSet_FilterSetID]);
+GO
+
+-- Creating foreign key on [FormletterPattern_FormletterPatternID] in table 'ColumnAssignments'
+ALTER TABLE [ColumnAssignments]
+ADD CONSTRAINT [FK_FormletterPatternColumnAssignment]
+    FOREIGN KEY ([FormletterPattern_FormletterPatternID])
+    REFERENCES [FormletterPatterns]
+        ([FormletterPatternID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_FormletterPatternColumnAssignment'
+CREATE INDEX [IX_FK_FormletterPatternColumnAssignment]
+ON [ColumnAssignments]
+    ([FormletterPattern_FormletterPatternID]);
+GO
+
+-- Creating foreign key on [UserAccount_UserAccountID] in table 'Persons'
+ALTER TABLE [Persons]
+ADD CONSTRAINT [FK_UserAccountPerson]
+    FOREIGN KEY ([UserAccount_UserAccountID])
+    REFERENCES [UserAccounts]
+        ([UserAccountID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UserAccountPerson'
+CREATE INDEX [IX_FK_UserAccountPerson]
+ON [Persons]
+    ([UserAccount_UserAccountID]);
+GO
+
+-- Creating foreign key on [RevenueType_RevenueTypeID] in table 'Revenues'
+ALTER TABLE [Revenues]
+ADD CONSTRAINT [FK_RevenueTypeEntität1]
+    FOREIGN KEY ([RevenueType_RevenueTypeID])
+    REFERENCES [RevenueTypes]
+        ([RevenueTypeID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_RevenueTypeEntität1'
+CREATE INDEX [IX_FK_RevenueTypeEntität1]
+ON [Revenues]
+    ([RevenueType_RevenueTypeID]);
+GO
+
+-- Creating foreign key on [Person_PersonID] in table 'Revenues'
+ALTER TABLE [Revenues]
+ADD CONSTRAINT [FK_PersonEntität1]
+    FOREIGN KEY ([Person_PersonID])
+    REFERENCES [Persons]
+        ([PersonID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PersonEntität1'
+CREATE INDEX [IX_FK_PersonEntität1]
+ON [Revenues]
+    ([Person_PersonID]);
+GO
+
+-- Creating foreign key on [TargetAccount_AccountID] in table 'Bookings'
+ALTER TABLE [Bookings]
+ADD CONSTRAINT [FK_AccountBooking]
+    FOREIGN KEY ([TargetAccount_AccountID])
+    REFERENCES [Accounts]
+        ([AccountID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_AccountBooking'
+CREATE INDEX [IX_FK_AccountBooking]
+ON [Bookings]
+    ([TargetAccount_AccountID]);
+GO
+
+-- Creating foreign key on [UserAccount_UserAccountID] in table 'Bookings'
+ALTER TABLE [Bookings]
+ADD CONSTRAINT [FK_UserAccountBooking]
+    FOREIGN KEY ([UserAccount_UserAccountID])
+    REFERENCES [UserAccounts]
+        ([UserAccountID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UserAccountBooking'
+CREATE INDEX [IX_FK_UserAccountBooking]
+ON [Bookings]
+    ([UserAccount_UserAccountID]);
+GO
+
+-- Creating foreign key on [ClosureUserAccount_UserAccountID] in table 'CashClosures'
+ALTER TABLE [CashClosures]
+ADD CONSTRAINT [FK_UserAccountCashClosure]
+    FOREIGN KEY ([ClosureUserAccount_UserAccountID])
+    REFERENCES [UserAccounts]
+        ([UserAccountID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UserAccountCashClosure'
+CREATE INDEX [IX_FK_UserAccountCashClosure]
+ON [CashClosures]
+    ([ClosureUserAccount_UserAccountID]);
+GO
+
+-- Creating foreign key on [CashClosure_CashClosureID] in table 'CashClosureReports'
+ALTER TABLE [CashClosureReports]
+ADD CONSTRAINT [FK_CashClosureCashClosureReport]
+    FOREIGN KEY ([CashClosure_CashClosureID])
+    REFERENCES [CashClosures]
+        ([CashClosureID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CashClosureCashClosureReport'
+CREATE INDEX [IX_FK_CashClosureCashClosureReport]
+ON [CashClosureReports]
+    ([CashClosure_CashClosureID]);
+GO
+
+-- Creating foreign key on [PrintUserAccount_UserAccountID] in table 'CashClosureReports'
+ALTER TABLE [CashClosureReports]
+ADD CONSTRAINT [FK_UserAccountCashClosureReport]
+    FOREIGN KEY ([PrintUserAccount_UserAccountID])
+    REFERENCES [UserAccounts]
+        ([UserAccountID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UserAccountCashClosureReport'
+CREATE INDEX [IX_FK_UserAccountCashClosureReport]
+ON [CashClosureReports]
+    ([PrintUserAccount_UserAccountID]);
+GO
+
+-- Creating foreign key on [DoneUserAccount_UserAccountID] in table 'CashClosureReports'
+ALTER TABLE [CashClosureReports]
+ADD CONSTRAINT [FK_UserAccountCashClosureReport1]
+    FOREIGN KEY ([DoneUserAccount_UserAccountID])
+    REFERENCES [UserAccounts]
+        ([UserAccountID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UserAccountCashClosureReport1'
+CREATE INDEX [IX_FK_UserAccountCashClosureReport1]
+ON [CashClosureReports]
+    ([DoneUserAccount_UserAccountID]);
+GO
+
+-- Creating foreign key on [CashClosure_CashClosureID] in table 'CashClosureReceipts'
+ALTER TABLE [CashClosureReceipts]
+ADD CONSTRAINT [FK_CashClosureCashClosureReceipt]
+    FOREIGN KEY ([CashClosure_CashClosureID])
+    REFERENCES [CashClosures]
+        ([CashClosureID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CashClosureCashClosureReceipt'
+CREATE INDEX [IX_FK_CashClosureCashClosureReceipt]
+ON [CashClosureReceipts]
+    ([CashClosure_CashClosureID]);
+GO
+
+-- Creating foreign key on [PrintUserAccount_UserAccountID] in table 'CashClosureReceipts'
+ALTER TABLE [CashClosureReceipts]
+ADD CONSTRAINT [FK_UserAccountCashClosureReceipt]
+    FOREIGN KEY ([PrintUserAccount_UserAccountID])
+    REFERENCES [UserAccounts]
+        ([UserAccountID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UserAccountCashClosureReceipt'
+CREATE INDEX [IX_FK_UserAccountCashClosureReceipt]
+ON [CashClosureReceipts]
+    ([PrintUserAccount_UserAccountID]);
+GO
+
+-- Creating foreign key on [Person_PersonID] in table 'Bookings'
+ALTER TABLE [Bookings]
+ADD CONSTRAINT [FK_PersonBooking]
+    FOREIGN KEY ([Person_PersonID])
+    REFERENCES [Persons]
+        ([PersonID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PersonBooking'
+CREATE INDEX [IX_FK_PersonBooking]
+ON [Bookings]
+    ([Person_PersonID]);
+GO
+
+-- --------------------------------------------------
+-- Script has ended
+-- --------------------------------------------------

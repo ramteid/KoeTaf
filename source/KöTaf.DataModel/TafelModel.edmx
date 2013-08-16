@@ -1,0 +1,1799 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TafelModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TafelModelStoreContainer">
+    <EntitySet Name="Persons" EntityType="TafelModel.Store.Persons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Titles" EntityType="TafelModel.Store.Titles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FamilyStates" EntityType="TafelModel.Store.FamilyStates" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Teams" EntityType="TafelModel.Store.Teams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TeamFunctions" EntityType="TafelModel.Store.TeamFunctions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Bookings" EntityType="TafelModel.Store.Bookings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RevenueTypes" EntityType="TafelModel.Store.RevenueTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserAccounts" EntityType="TafelModel.Store.UserAccounts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Children" EntityType="TafelModel.Store.Children" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sponsors" EntityType="TafelModel.Store.Sponsors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FundingTypes" EntityType="TafelModel.Store.FundingTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Notes" EntityType="TafelModel.Store.Notes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Accounts" EntityType="TafelModel.Store.Accounts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Filters" EntityType="TafelModel.Store.Filters" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FilterSets" EntityType="TafelModel.Store.FilterSets" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FormletterPatterns" EntityType="TafelModel.Store.FormletterPatterns" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ColumnAssignments" EntityType="TafelModel.Store.ColumnAssignments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Revenues" EntityType="TafelModel.Store.Revenues" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CashClosures" EntityType="TafelModel.Store.CashClosures" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CashClosureReports" EntityType="TafelModel.Store.CashClosureReports" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CashClosureReceipts" EntityType="TafelModel.Store.CashClosureReceipts" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="PersonTitle" Association="TafelModel.Store.PersonTitle">
+      <End Role="Person" EntitySet="Persons" />
+      <End Role="Title" EntitySet="Titles" />
+    </AssociationSet>
+    <AssociationSet Name="PersonChild" Association="TafelModel.Store.PersonChild">
+      <End Role="Person" EntitySet="Persons" />
+      <End Role="Child" EntitySet="Children" />
+    </AssociationSet>
+    <AssociationSet Name="TeamTitle" Association="TafelModel.Store.TeamTitle">
+      <End Role="Team" EntitySet="Teams" />
+      <End Role="Title" EntitySet="Titles" />
+    </AssociationSet>
+    <AssociationSet Name="TeamFunctionTeam" Association="TafelModel.Store.TeamFunctionTeam">
+      <End Role="TeamFunction" EntitySet="TeamFunctions" />
+      <End Role="Team" EntitySet="Teams" />
+    </AssociationSet>
+    <AssociationSet Name="FundingTypeSponsor" Association="TafelModel.Store.FundingTypeSponsor">
+      <End Role="FundingType" EntitySet="FundingTypes" />
+      <End Role="Sponsor" EntitySet="Sponsors" />
+    </AssociationSet>
+    <AssociationSet Name="TitleSponsor" Association="TafelModel.Store.TitleSponsor">
+      <End Role="Title" EntitySet="Titles" />
+      <End Role="Sponsor" EntitySet="Sponsors" />
+    </AssociationSet>
+    <AssociationSet Name="AdditionalRecordAccount" Association="TafelModel.Store.AdditionalRecordAccount">
+      <End Role="AdditionalRecord" EntitySet="Bookings" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FamilyStatePerson" Association="TafelModel.Store.FamilyStatePerson">
+      <End Role="FamilyState" EntitySet="FamilyStates" />
+      <End Role="Person" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="TitlePerson" Association="TafelModel.Store.TitlePerson">
+      <End Role="Title" EntitySet="Titles" />
+      <End Role="Person" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="FormletterPatternFilterSet" Association="TafelModel.Store.FormletterPatternFilterSet">
+      <End Role="FormletterPattern" EntitySet="FormletterPatterns" />
+      <End Role="FilterSet" EntitySet="FilterSets" />
+    </AssociationSet>
+    <AssociationSet Name="FilterSetFilter" Association="TafelModel.Store.FilterSetFilter">
+      <End Role="FilterSet" EntitySet="FilterSets" />
+      <End Role="Filter" EntitySet="Filters" />
+    </AssociationSet>
+    <AssociationSet Name="FormletterPatternColumnAssignment" Association="TafelModel.Store.FormletterPatternColumnAssignment">
+      <End Role="FormletterPattern" EntitySet="FormletterPatterns" />
+      <End Role="ColumnAssignment" EntitySet="ColumnAssignments" />
+    </AssociationSet>
+    <AssociationSet Name="UserAccountPerson" Association="TafelModel.Store.UserAccountPerson">
+      <End Role="UserAccount" EntitySet="UserAccounts" />
+      <End Role="Person" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="RevenueTypeEntität1" Association="TafelModel.Store.RevenueTypeEntität1">
+      <End Role="RevenueType" EntitySet="RevenueTypes" />
+      <End Role="Entität1" EntitySet="Revenues" />
+    </AssociationSet>
+    <AssociationSet Name="PersonEntität1" Association="TafelModel.Store.PersonEntität1">
+      <End Role="Person" EntitySet="Persons" />
+      <End Role="Entität1" EntitySet="Revenues" />
+    </AssociationSet>
+    <AssociationSet Name="AccountBooking" Association="TafelModel.Store.AccountBooking">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Booking" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="UserAccountBooking" Association="TafelModel.Store.UserAccountBooking">
+      <End Role="UserAccount" EntitySet="UserAccounts" />
+      <End Role="Booking" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="UserAccountCashClosure" Association="TafelModel.Store.UserAccountCashClosure">
+      <End Role="UserAccount" EntitySet="UserAccounts" />
+      <End Role="CashClosure" EntitySet="CashClosures" />
+    </AssociationSet>
+    <AssociationSet Name="CashClosureCashClosureReport" Association="TafelModel.Store.CashClosureCashClosureReport">
+      <End Role="CashClosure" EntitySet="CashClosures" />
+      <End Role="CashClosureReport" EntitySet="CashClosureReports" />
+    </AssociationSet>
+    <AssociationSet Name="UserAccountCashClosureReport" Association="TafelModel.Store.UserAccountCashClosureReport">
+      <End Role="UserAccount" EntitySet="UserAccounts" />
+      <End Role="CashClosureReport" EntitySet="CashClosureReports" />
+    </AssociationSet>
+    <AssociationSet Name="UserAccountCashClosureReport1" Association="TafelModel.Store.UserAccountCashClosureReport1">
+      <End Role="UserAccount" EntitySet="UserAccounts" />
+      <End Role="CashClosureReport" EntitySet="CashClosureReports" />
+    </AssociationSet>
+    <AssociationSet Name="CashClosureCashClosureReceipt" Association="TafelModel.Store.CashClosureCashClosureReceipt">
+      <End Role="CashClosure" EntitySet="CashClosures" />
+      <End Role="CashClosureReceipt" EntitySet="CashClosureReceipts" />
+    </AssociationSet>
+    <AssociationSet Name="UserAccountCashClosureReceipt" Association="TafelModel.Store.UserAccountCashClosureReceipt">
+      <End Role="UserAccount" EntitySet="UserAccounts" />
+      <End Role="CashClosureReceipt" EntitySet="CashClosureReceipts" />
+    </AssociationSet>
+    <AssociationSet Name="PersonBooking" Association="TafelModel.Store.PersonBooking">
+      <End Role="Person" EntitySet="Persons" />
+      <End Role="Booking" EntitySet="Bookings" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" />
+    <Property Name="Street" Type="nvarchar" Nullable="false" />
+    <Property Name="Nationality" Type="nvarchar" Nullable="false" />
+    <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+    <Property Name="CountryOfBirth" Type="nvarchar" Nullable="true" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Group" Type="int" Nullable="false" />
+    <Property Name="ZipCode" Type="int" Nullable="false" />
+    <Property Name="ValidityStart" Type="datetime" Nullable="false" />
+    <Property Name="ValidityEnd" Type="datetime" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" />
+    <Property Name="MobileNo" Type="nvarchar" Nullable="true" />
+    <Property Name="Phone" Type="nvarchar" Nullable="true" />
+    <Property Name="MaritalFirstName" Type="nvarchar" Nullable="true" />
+    <Property Name="MaritalLastName" Type="nvarchar" Nullable="true" />
+    <Property Name="MaritalBirthday" Type="datetime" Nullable="true" />
+    <Property Name="MaritalNationality" Type="nvarchar" Nullable="true" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPurchase" Type="datetime" Nullable="true" />
+    <Property Name="LastModified" Type="datetime" Nullable="true" />
+    <Property Name="Comment" Type="nvarchar" Nullable="true" />
+    <Property Name="City" Type="nvarchar" Nullable="false" />
+    <Property Name="TableNo" Type="int" Nullable="true" />
+    <Property Name="MaritalCountryOfBirth" Type="nvarchar" Nullable="true" />
+    <Property Name="MaritalMobile" Type="nvarchar" Nullable="true" />
+    <Property Name="MaritalPhone" Type="nvarchar" Nullable="true" />
+    <Property Name="MaritalEmail" Type="nvarchar" Nullable="true" />
+    <Property Name="Title_TitleID" Type="int" Nullable="false" />
+    <Property Name="FamilyState_FamilyStateID" Type="int" Nullable="false" />
+    <Property Name="MaritalTitle_TitleID" Type="int" Nullable="true" />
+    <Property Name="UserAccount_UserAccountID" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Titles">
+    <Key>
+      <PropertyRef Name="TitleID" />
+    </Key>
+    <Property Name="TitleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FamilyStates">
+    <Key>
+      <PropertyRef Name="FamilyStateID" />
+    </Key>
+    <Property Name="FamilyStateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" />
+    <Property Name="ShortName" Type="nvarchar" Nullable="false" />
+    <Property Name="NumberOfPerson" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Teams">
+    <Key>
+      <PropertyRef Name="TeamID" />
+    </Key>
+    <Property Name="TeamID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Street" Type="nvarchar" Nullable="false" />
+    <Property Name="ZipCode" Type="int" Nullable="false" />
+    <Property Name="City" Type="nvarchar" Nullable="false" />
+    <Property Name="MobileNo" Type="nvarchar" Nullable="true" />
+    <Property Name="PhoneNo" Type="nvarchar" Nullable="true" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" />
+    <Property Name="IsFormLetterAllowed" Type="bit" Nullable="false" />
+    <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+    <Property Name="Title_TitleID" Type="int" Nullable="false" />
+    <Property Name="TeamFunction_TeamFunctionID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeamFunctions">
+    <Key>
+      <PropertyRef Name="TeamFunctionID" />
+    </Key>
+    <Property Name="TeamFunctionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bookings">
+    <Key>
+      <PropertyRef Name="BookingID" />
+    </Key>
+    <Property Name="BookingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Amount" Type="float" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" Nullable="true" />
+    <Property Name="IsCorrection" Type="bit" Nullable="false" />
+    <Property Name="SourceAccount_AccountID" Type="int" Nullable="false" />
+    <Property Name="TargetAccount_AccountID" Type="int" Nullable="false" />
+    <Property Name="UserAccount_UserAccountID" Type="int" Nullable="true" />
+    <Property Name="Person_PersonID" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="RevenueTypes">
+    <Key>
+      <PropertyRef Name="RevenueTypeID" />
+    </Key>
+    <Property Name="RevenueTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserAccounts">
+    <Key>
+      <PropertyRef Name="UserAccountID" />
+    </Key>
+    <Property Name="UserAccountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" />
+    <Property Name="IsAdmin" Type="bit" Nullable="false" DefaultValue="false" />
+    <Property Name="ImageName" Type="nvarchar" Nullable="true" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Children">
+    <Key>
+      <PropertyRef Name="ChildID" />
+    </Key>
+    <Property Name="ChildID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" />
+    <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+    <Property Name="IsFemale" Type="bit" Nullable="false" DefaultValue="false" />
+    <Property Name="LastModified" Type="datetime" Nullable="true" />
+    <Property Name="Person_PersonID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sponsors">
+    <Key>
+      <PropertyRef Name="SponsorID" />
+    </Key>
+    <Property Name="SponsorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Street" Type="nvarchar" Nullable="false" />
+    <Property Name="City" Type="nvarchar" Nullable="false" />
+    <Property Name="ZipCode" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" />
+    <Property Name="MobileNo" Type="nvarchar" Nullable="true" />
+    <Property Name="PhoneNo" Type="nvarchar" Nullable="true" />
+    <Property Name="FaxNo" Type="nvarchar" Nullable="true" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" />
+    <Property Name="ContactPerson" Type="nvarchar" Nullable="true" />
+    <Property Name="IsFormLetterAllowed" Type="bit" Nullable="false" DefaultValue="true" />
+    <Property Name="LastModified" Type="datetime" Nullable="true" />
+    <Property Name="CompanyName" Type="nvarchar" Nullable="true" />
+    <Property Name="IsCompany" Type="bit" Nullable="false" />
+    <Property Name="FundingType_FundingTypeID" Type="int" Nullable="false" />
+    <Property Name="Title_TitleID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FundingTypes">
+    <Key>
+      <PropertyRef Name="FundingTypeID" />
+    </Key>
+    <Property Name="FundingTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notes">
+    <Key>
+      <PropertyRef Name="NoteID" />
+    </Key>
+    <Property Name="NoteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" />
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" Nullable="true" />
+    <Property Name="IsOfficial" Type="bit" Nullable="false" />
+    <Property Name="ZeroPeriod" Type="int" Nullable="false" />
+    <Property Name="LatestBalance" Type="float" Nullable="false" />
+    <Property Name="IsFixed" Type="bit" Nullable="false" />
+    <Property Name="IsCapital" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Filters">
+    <Key>
+      <PropertyRef Name="FilterID" />
+    </Key>
+    <Property Name="FilterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Table" Type="nvarchar" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" Nullable="false" />
+    <Property Name="Operation" Type="nvarchar" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" Nullable="false" />
+    <Property Name="FilterSet_FilterSetID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FilterSets">
+    <Key>
+      <PropertyRef Name="FilterSetID" />
+    </Key>
+    <Property Name="FilterSetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" />
+    <Property Name="Linking" Type="nvarchar" Nullable="false" />
+    <Property Name="FormletterPattern_FormletterPatternID" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="FormletterPatterns">
+    <Key>
+      <PropertyRef Name="FormletterPatternID" />
+    </Key>
+    <Property Name="FormletterPatternID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" />
+    <Property Name="SaluationM" Type="nvarchar" Nullable="false" />
+    <Property Name="SaluationF" Type="nvarchar" Nullable="false" />
+    <Property Name="SaluationNT" Type="nvarchar" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" Nullable="false" />
+    <Property Name="Text" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ColumnAssignments">
+    <Key>
+      <PropertyRef Name="ColumnAssignmentID" />
+    </Key>
+    <Property Name="ColumnAssignmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CsvColumn" Type="nvarchar" Nullable="false" />
+    <Property Name="DatabaseTable" Type="nvarchar" Nullable="false" />
+    <Property Name="DatabaseColumn" Type="nvarchar" Nullable="false" />
+    <Property Name="FormletterPattern_FormletterPatternID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Revenues">
+    <Key>
+      <PropertyRef Name="RevenueID" />
+    </Key>
+    <Property Name="RevenueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Amount" Type="float" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="true" />
+    <Property Name="Description" Type="nvarchar" Nullable="true" />
+    <Property Name="RevenueType_RevenueTypeID" Type="int" Nullable="false" />
+    <Property Name="Person_PersonID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CashClosures">
+    <Key>
+      <PropertyRef Name="CashClosureID" />
+    </Key>
+    <Property Name="CashClosureID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar" Nullable="true" />
+    <Property Name="ClosureDate" Type="datetime" Nullable="false" />
+    <Property Name="Sum" Type="float" Nullable="false" />
+    <Property Name="Revenue" Type="float" Nullable="false" />
+    <Property Name="Expense" Type="float" Nullable="false" />
+    <Property Name="ClosureUserAccount_UserAccountID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CashClosureReports">
+    <Key>
+      <PropertyRef Name="CashClosureReportID" />
+    </Key>
+    <Property Name="CashClosureReportID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PrintDone" Type="bit" Nullable="false" />
+    <Property Name="PrintDate" Type="datetime" Nullable="true" />
+    <Property Name="Done" Type="bit" Nullable="false" />
+    <Property Name="DoneDate" Type="datetime" Nullable="true" />
+    <Property Name="CashClosure_CashClosureID" Type="int" Nullable="false" />
+    <Property Name="PrintUserAccount_UserAccountID" Type="int" Nullable="true" />
+    <Property Name="DoneUserAccount_UserAccountID" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="CashClosureReceipts">
+    <Key>
+      <PropertyRef Name="CashClosureReceiptID" />
+    </Key>
+    <Property Name="CashClosureReceiptID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PrintDone" Type="bit" Nullable="false" />
+    <Property Name="PrintDate" Type="datetime" Nullable="true" />
+    <Property Name="CashClosure_CashClosureID" Type="int" Nullable="false" />
+    <Property Name="PrintUserAccount_UserAccountID" Type="int" Nullable="true" />
+  </EntityType>
+  <Association Name="PersonTitle">
+    <End Role="Person" Type="TafelModel.Store.Persons" Multiplicity="*" />
+    <End Role="Title" Type="TafelModel.Store.Titles" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Title">
+        <PropertyRef Name="TitleID" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="Title_TitleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonChild">
+    <End Role="Person" Type="TafelModel.Store.Persons" Multiplicity="1" />
+    <End Role="Child" Type="TafelModel.Store.Children" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Child">
+        <PropertyRef Name="Person_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TeamTitle">
+    <End Role="Team" Type="TafelModel.Store.Teams" Multiplicity="*" />
+    <End Role="Title" Type="TafelModel.Store.Titles" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Title">
+        <PropertyRef Name="TitleID" />
+      </Principal>
+      <Dependent Role="Team">
+        <PropertyRef Name="Title_TitleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TeamFunctionTeam">
+    <End Role="TeamFunction" Type="TafelModel.Store.TeamFunctions" Multiplicity="1" />
+    <End Role="Team" Type="TafelModel.Store.Teams" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TeamFunction">
+        <PropertyRef Name="TeamFunctionID" />
+      </Principal>
+      <Dependent Role="Team">
+        <PropertyRef Name="TeamFunction_TeamFunctionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FundingTypeSponsor">
+    <End Role="FundingType" Type="TafelModel.Store.FundingTypes" Multiplicity="1" />
+    <End Role="Sponsor" Type="TafelModel.Store.Sponsors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FundingType">
+        <PropertyRef Name="FundingTypeID" />
+      </Principal>
+      <Dependent Role="Sponsor">
+        <PropertyRef Name="FundingType_FundingTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TitleSponsor">
+    <End Role="Title" Type="TafelModel.Store.Titles" Multiplicity="1" />
+    <End Role="Sponsor" Type="TafelModel.Store.Sponsors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Title">
+        <PropertyRef Name="TitleID" />
+      </Principal>
+      <Dependent Role="Sponsor">
+        <PropertyRef Name="Title_TitleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AdditionalRecordAccount">
+    <End Role="AdditionalRecord" Type="TafelModel.Store.Bookings" Multiplicity="*" />
+    <End Role="Account" Type="TafelModel.Store.Accounts" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="AdditionalRecord">
+        <PropertyRef Name="SourceAccount_AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FamilyStatePerson">
+    <End Role="FamilyState" Type="TafelModel.Store.FamilyStates" Multiplicity="1" />
+    <End Role="Person" Type="TafelModel.Store.Persons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FamilyState">
+        <PropertyRef Name="FamilyStateID" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="FamilyState_FamilyStateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TitlePerson">
+    <End Role="Title" Type="TafelModel.Store.Titles" Multiplicity="0..1" />
+    <End Role="Person" Type="TafelModel.Store.Persons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Title">
+        <PropertyRef Name="TitleID" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="MaritalTitle_TitleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormletterPatternFilterSet">
+    <End Role="FormletterPattern" Type="TafelModel.Store.FormletterPatterns" Multiplicity="0..1" />
+    <End Role="FilterSet" Type="TafelModel.Store.FilterSets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormletterPattern">
+        <PropertyRef Name="FormletterPatternID" />
+      </Principal>
+      <Dependent Role="FilterSet">
+        <PropertyRef Name="FormletterPattern_FormletterPatternID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FilterSetFilter">
+    <End Role="FilterSet" Type="TafelModel.Store.FilterSets" Multiplicity="1" />
+    <End Role="Filter" Type="TafelModel.Store.Filters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FilterSet">
+        <PropertyRef Name="FilterSetID" />
+      </Principal>
+      <Dependent Role="Filter">
+        <PropertyRef Name="FilterSet_FilterSetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormletterPatternColumnAssignment">
+    <End Role="FormletterPattern" Type="TafelModel.Store.FormletterPatterns" Multiplicity="1" />
+    <End Role="ColumnAssignment" Type="TafelModel.Store.ColumnAssignments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormletterPattern">
+        <PropertyRef Name="FormletterPatternID" />
+      </Principal>
+      <Dependent Role="ColumnAssignment">
+        <PropertyRef Name="FormletterPattern_FormletterPatternID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserAccountPerson">
+    <End Role="UserAccount" Type="TafelModel.Store.UserAccounts" Multiplicity="0..1" />
+    <End Role="Person" Type="TafelModel.Store.Persons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserAccount">
+        <PropertyRef Name="UserAccountID" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="UserAccount_UserAccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RevenueTypeEntität1">
+    <End Role="RevenueType" Type="TafelModel.Store.RevenueTypes" Multiplicity="1" />
+    <End Role="Entität1" Type="TafelModel.Store.Revenues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RevenueType">
+        <PropertyRef Name="RevenueTypeID" />
+      </Principal>
+      <Dependent Role="Entität1">
+        <PropertyRef Name="RevenueType_RevenueTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonEntität1">
+    <End Role="Person" Type="TafelModel.Store.Persons" Multiplicity="1" />
+    <End Role="Entität1" Type="TafelModel.Store.Revenues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Entität1">
+        <PropertyRef Name="Person_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AccountBooking">
+    <End Role="Account" Type="TafelModel.Store.Accounts" Multiplicity="1" />
+    <End Role="Booking" Type="TafelModel.Store.Bookings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="TargetAccount_AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserAccountBooking">
+    <End Role="UserAccount" Type="TafelModel.Store.UserAccounts" Multiplicity="0..1" />
+    <End Role="Booking" Type="TafelModel.Store.Bookings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserAccount">
+        <PropertyRef Name="UserAccountID" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="UserAccount_UserAccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserAccountCashClosure">
+    <End Role="UserAccount" Type="TafelModel.Store.UserAccounts" Multiplicity="1" />
+    <End Role="CashClosure" Type="TafelModel.Store.CashClosures" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserAccount">
+        <PropertyRef Name="UserAccountID" />
+      </Principal>
+      <Dependent Role="CashClosure">
+        <PropertyRef Name="ClosureUserAccount_UserAccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CashClosureCashClosureReport">
+    <End Role="CashClosure" Type="TafelModel.Store.CashClosures" Multiplicity="1" />
+    <End Role="CashClosureReport" Type="TafelModel.Store.CashClosureReports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CashClosure">
+        <PropertyRef Name="CashClosureID" />
+      </Principal>
+      <Dependent Role="CashClosureReport">
+        <PropertyRef Name="CashClosure_CashClosureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserAccountCashClosureReport">
+    <End Role="UserAccount" Type="TafelModel.Store.UserAccounts" Multiplicity="0..1" />
+    <End Role="CashClosureReport" Type="TafelModel.Store.CashClosureReports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserAccount">
+        <PropertyRef Name="UserAccountID" />
+      </Principal>
+      <Dependent Role="CashClosureReport">
+        <PropertyRef Name="PrintUserAccount_UserAccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserAccountCashClosureReport1">
+    <End Role="UserAccount" Type="TafelModel.Store.UserAccounts" Multiplicity="0..1" />
+    <End Role="CashClosureReport" Type="TafelModel.Store.CashClosureReports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserAccount">
+        <PropertyRef Name="UserAccountID" />
+      </Principal>
+      <Dependent Role="CashClosureReport">
+        <PropertyRef Name="DoneUserAccount_UserAccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CashClosureCashClosureReceipt">
+    <End Role="CashClosure" Type="TafelModel.Store.CashClosures" Multiplicity="1" />
+    <End Role="CashClosureReceipt" Type="TafelModel.Store.CashClosureReceipts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CashClosure">
+        <PropertyRef Name="CashClosureID" />
+      </Principal>
+      <Dependent Role="CashClosureReceipt">
+        <PropertyRef Name="CashClosure_CashClosureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserAccountCashClosureReceipt">
+    <End Role="UserAccount" Type="TafelModel.Store.UserAccounts" Multiplicity="0..1" />
+    <End Role="CashClosureReceipt" Type="TafelModel.Store.CashClosureReceipts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserAccount">
+        <PropertyRef Name="UserAccountID" />
+      </Principal>
+      <Dependent Role="CashClosureReceipt">
+        <PropertyRef Name="PrintUserAccount_UserAccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonBooking">
+    <End Role="Person" Type="TafelModel.Store.Persons" Multiplicity="0..1" />
+    <End Role="Booking" Type="TafelModel.Store.Bookings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="Person_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="TafelModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="TafelModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Persons" EntityType="TafelModel.Person" />
+          <EntitySet Name="Titles" EntityType="TafelModel.Title" />
+          <AssociationSet Name="PersonTitle" Association="TafelModel.PersonTitle">
+            <End Role="Person" EntitySet="Persons" />
+            <End Role="Title" EntitySet="Titles" />
+          </AssociationSet>
+          <EntitySet Name="FamilyStates" EntityType="TafelModel.FamilyState" />
+          <EntitySet Name="Teams" EntityType="TafelModel.Team" />
+          <EntitySet Name="TeamFunctions" EntityType="TafelModel.TeamFunction" />
+          <EntitySet Name="Bookings" EntityType="TafelModel.Booking" />
+          <EntitySet Name="RevenueTypes" EntityType="TafelModel.RevenueType" />
+          <EntitySet Name="UserAccounts" EntityType="TafelModel.UserAccount" />
+          <EntitySet Name="Children" EntityType="TafelModel.Child" />
+          <AssociationSet Name="PersonChild" Association="TafelModel.PersonChild">
+            <End Role="Person" EntitySet="Persons" />
+            <End Role="Child" EntitySet="Children" />
+          </AssociationSet>
+          <EntitySet Name="Sponsors" EntityType="TafelModel.Sponsor" />
+          <EntitySet Name="FundingTypes" EntityType="TafelModel.FundingType" />
+          <AssociationSet Name="TeamTitle" Association="TafelModel.TeamTitle">
+            <End Role="Team" EntitySet="Teams" />
+            <End Role="Title" EntitySet="Titles" />
+          </AssociationSet>
+          <AssociationSet Name="TeamFunctionTeam" Association="TafelModel.TeamFunctionTeam">
+            <End Role="TeamFunction" EntitySet="TeamFunctions" />
+            <End Role="Team" EntitySet="Teams" />
+          </AssociationSet>
+          <AssociationSet Name="FundingTypeSponsor" Association="TafelModel.FundingTypeSponsor">
+            <End Role="FundingType" EntitySet="FundingTypes" />
+            <End Role="Sponsor" EntitySet="Sponsors" />
+          </AssociationSet>
+          <AssociationSet Name="TitleSponsor" Association="TafelModel.TitleSponsor">
+            <End Role="Title" EntitySet="Titles" />
+            <End Role="Sponsor" EntitySet="Sponsors" />
+          </AssociationSet>
+          <EntitySet Name="Notes" EntityType="TafelModel.Note" />
+          <EntitySet Name="Accounts" EntityType="TafelModel.Account" />
+          <AssociationSet Name="AdditionalRecordAccount" Association="TafelModel.AdditionalRecordAccount">
+            <End Role="AdditionalRecord" EntitySet="Bookings" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="FamilyStatePerson" Association="TafelModel.FamilyStatePerson">
+            <End Role="FamilyState" EntitySet="FamilyStates" />
+            <End Role="Person" EntitySet="Persons" />
+          </AssociationSet>
+          <EntitySet Name="Filters" EntityType="TafelModel.Filter" />
+          <EntitySet Name="FilterSets" EntityType="TafelModel.FilterSet" />
+          <EntitySet Name="FormletterPatterns" EntityType="TafelModel.FormletterPattern" />
+          <EntitySet Name="ColumnAssignments" EntityType="TafelModel.ColumnAssignment" />
+          <AssociationSet Name="TitlePerson" Association="TafelModel.TitlePerson">
+            <End Role="Title" EntitySet="Titles" />
+            <End Role="Person" EntitySet="Persons" />
+          </AssociationSet>
+          <AssociationSet Name="FormletterPatternFilterSet" Association="TafelModel.FormletterPatternFilterSet">
+            <End Role="FormletterPattern" EntitySet="FormletterPatterns" />
+            <End Role="FilterSet" EntitySet="FilterSets" />
+          </AssociationSet>
+          <AssociationSet Name="FilterSetFilter" Association="TafelModel.FilterSetFilter">
+            <End Role="FilterSet" EntitySet="FilterSets" />
+            <End Role="Filter" EntitySet="Filters" />
+          </AssociationSet>
+          <AssociationSet Name="FormletterPatternColumnAssignment" Association="TafelModel.FormletterPatternColumnAssignment">
+            <End Role="FormletterPattern" EntitySet="FormletterPatterns" />
+            <End Role="ColumnAssignment" EntitySet="ColumnAssignments" />
+          </AssociationSet>
+          <AssociationSet Name="UserAccountPerson" Association="TafelModel.UserAccountPerson">
+            <End Role="UserAccount" EntitySet="UserAccounts" />
+            <End Role="Person" EntitySet="Persons" />
+          </AssociationSet>
+          <EntitySet Name="Revenues" EntityType="TafelModel.Revenue" />
+          <AssociationSet Name="RevenueTypeEntität1" Association="TafelModel.RevenueTypeEntität1">
+            <End Role="RevenueType" EntitySet="RevenueTypes" />
+            <End Role="Entität1" EntitySet="Revenues" />
+          </AssociationSet>
+          <AssociationSet Name="PersonEntität1" Association="TafelModel.PersonEntität1">
+            <End Role="Person" EntitySet="Persons" />
+            <End Role="Entität1" EntitySet="Revenues" />
+          </AssociationSet>
+          <AssociationSet Name="AccountBooking" Association="TafelModel.AccountBooking">
+            <End Role="Account" EntitySet="Accounts" />
+            <End Role="Booking" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="UserAccountBooking" Association="TafelModel.UserAccountBooking">
+            <End Role="UserAccount" EntitySet="UserAccounts" />
+            <End Role="Booking" EntitySet="Bookings" />
+          </AssociationSet>
+          <EntitySet Name="CashClosures" EntityType="TafelModel.CashClosure" />
+          <AssociationSet Name="UserAccountCashClosure" Association="TafelModel.UserAccountCashClosure">
+            <End Role="UserAccount" EntitySet="UserAccounts" />
+            <End Role="CashClosure" EntitySet="CashClosures" />
+          </AssociationSet>
+          <EntitySet Name="CashClosureReports" EntityType="TafelModel.CashClosureReport" />
+          <AssociationSet Name="CashClosureCashClosureReport" Association="TafelModel.CashClosureCashClosureReport">
+            <End Role="CashClosure" EntitySet="CashClosures" />
+            <End Role="CashClosureReport" EntitySet="CashClosureReports" />
+          </AssociationSet>
+          <AssociationSet Name="UserAccountCashClosureReport" Association="TafelModel.UserAccountCashClosureReport">
+            <End Role="UserAccount" EntitySet="UserAccounts" />
+            <End Role="CashClosureReport" EntitySet="CashClosureReports" />
+          </AssociationSet>
+          <AssociationSet Name="UserAccountCashClosureReport1" Association="TafelModel.UserAccountCashClosureReport1">
+            <End Role="UserAccount" EntitySet="UserAccounts" />
+            <End Role="CashClosureReport" EntitySet="CashClosureReports" />
+          </AssociationSet>
+          <EntitySet Name="CashClosureReceipts" EntityType="TafelModel.CashClosureReceipt" />
+          <AssociationSet Name="CashClosureCashClosureReceipt" Association="TafelModel.CashClosureCashClosureReceipt">
+            <End Role="CashClosure" EntitySet="CashClosures" />
+            <End Role="CashClosureReceipt" EntitySet="CashClosureReceipts" />
+          </AssociationSet>
+          <AssociationSet Name="UserAccountCashClosureReceipt" Association="TafelModel.UserAccountCashClosureReceipt">
+            <End Role="UserAccount" EntitySet="UserAccounts" />
+            <End Role="CashClosureReceipt" EntitySet="CashClosureReceipts" />
+          </AssociationSet>
+          <AssociationSet Name="PersonBooking" Association="TafelModel.PersonBooking">
+            <End Role="Person" EntitySet="Persons" />
+            <End Role="Booking" EntitySet="Bookings" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="PersonID" />
+          </Key>
+          <Property Type="Int32" Name="PersonID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FirstName" Nullable="false" />
+          <Property Type="String" Name="LastName" Nullable="false" />
+          <Property Type="String" Name="Street" Nullable="false" />
+          <Property Type="String" Name="Nationality" Nullable="false" />
+          <Property Type="DateTime" Name="DateOfBirth" Nullable="false" />
+          <Property Type="String" Name="CountryOfBirth" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Int32" Name="Group" Nullable="false" />
+          <Property Type="Int32" Name="ZipCode" Nullable="false" />
+          <Property Type="DateTime" Name="ValidityStart" Nullable="false" />
+          <Property Type="DateTime" Name="ValidityEnd" Nullable="false" />
+          <Property Type="String" Name="Email" Nullable="true" />
+          <Property Type="String" Name="MobileNo" Nullable="true" />
+          <Property Type="String" Name="Phone" Nullable="true" />
+          <Property Type="String" Name="MaritalFirstName" Nullable="true" />
+          <Property Type="String" Name="MaritalLastName" Nullable="true" />
+          <Property Type="DateTime" Name="MaritalBirthday" Nullable="true" />
+          <Property Type="String" Name="MaritalNationality" Nullable="true" />
+          <Property Type="DateTime" Name="CreationDate" Nullable="false" />
+          <Property Type="DateTime" Name="LastPurchase" Nullable="true" />
+          <Property Type="DateTime" Name="LastModified" Nullable="true" />
+          <Property Type="String" Name="Comment" Nullable="true" />
+          <Property Type="String" Name="City" Nullable="false" />
+          <Property Type="Int32" Name="TableNo" Nullable="true" />
+          <NavigationProperty Name="Title" Relationship="TafelModel.PersonTitle" FromRole="Person" ToRole="Title" />
+          <NavigationProperty Name="Child" Relationship="TafelModel.PersonChild" FromRole="Person" ToRole="Child" />
+          <NavigationProperty Name="FamilyState" Relationship="TafelModel.FamilyStatePerson" FromRole="Person" ToRole="FamilyState" />
+          <Property Type="String" Name="MaritalCountryOfBirth" Nullable="true" />
+          <Property Type="String" Name="MaritalMobile" Nullable="true" />
+          <Property Type="String" Name="MaritalPhone" Nullable="true" />
+          <Property Type="String" Name="MaritalEmail" Nullable="true" />
+          <NavigationProperty Name="MaritalTitle" Relationship="TafelModel.TitlePerson" FromRole="Person" ToRole="Title" />
+          <NavigationProperty Name="UserAccount" Relationship="TafelModel.UserAccountPerson" FromRole="Person" ToRole="UserAccount" />
+          <NavigationProperty Name="Booking" Relationship="TafelModel.PersonBooking" FromRole="Person" ToRole="Booking" />
+        </EntityType>
+        <EntityType Name="Title">
+          <Key>
+            <PropertyRef Name="TitleID" />
+          </Key>
+          <Property Type="Int32" Name="TitleID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="TafelModel.PersonTitle" FromRole="Title" ToRole="Person" />
+          <NavigationProperty Name="Team" Relationship="TafelModel.TeamTitle" FromRole="Title" ToRole="Team" />
+          <NavigationProperty Name="Sponsor" Relationship="TafelModel.TitleSponsor" FromRole="Title" ToRole="Sponsor" />
+          <NavigationProperty Name="Person_1" Relationship="TafelModel.TitlePerson" FromRole="Title" ToRole="Person" />
+        </EntityType>
+        <Association Name="PersonTitle">
+          <End Type="TafelModel.Person" Role="Person" Multiplicity="*" />
+          <End Type="TafelModel.Title" Role="Title" Multiplicity="1" />
+        </Association>
+        <EntityType Name="FamilyState">
+          <Key>
+            <PropertyRef Name="FamilyStateID" />
+          </Key>
+          <Property Type="Int32" Name="FamilyStateID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="TafelModel.FamilyStatePerson" FromRole="FamilyState" ToRole="Person" />
+          <Property Type="String" Name="ShortName" Nullable="false" />
+          <Property Type="Int32" Name="NumberOfPerson" Nullable="true" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="TeamID" />
+          </Key>
+          <Property Type="Int32" Name="TeamID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FirstName" Nullable="false" />
+          <Property Type="String" Name="LastName" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="String" Name="Street" Nullable="false" />
+          <Property Type="Int32" Name="ZipCode" Nullable="false" />
+          <Property Type="String" Name="City" Nullable="false" />
+          <Property Type="String" Name="MobileNo" Nullable="true" />
+          <Property Type="String" Name="PhoneNo" Nullable="true" />
+          <NavigationProperty Name="Title" Relationship="TafelModel.TeamTitle" FromRole="Team" ToRole="Title" />
+          <NavigationProperty Name="TeamFunction" Relationship="TafelModel.TeamFunctionTeam" FromRole="Team" ToRole="TeamFunction" />
+          <Property Type="String" Name="Email" Nullable="true" />
+          <Property Type="Boolean" Name="IsFormLetterAllowed" Nullable="false" />
+          <Property Type="DateTime" Name="DateOfBirth" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TeamFunction">
+          <Key>
+            <PropertyRef Name="TeamFunctionID" />
+          </Key>
+          <Property Type="Int32" Name="TeamFunctionID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Team" Relationship="TafelModel.TeamFunctionTeam" FromRole="TeamFunction" ToRole="Team" />
+        </EntityType>
+        <EntityType Name="Booking">
+          <Key>
+            <PropertyRef Name="BookingID" />
+          </Key>
+          <Property Type="Int32" Name="BookingID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Double" Name="Amount" Nullable="false" />
+          <Property Type="DateTime" Name="Date" Nullable="false" />
+          <Property Type="String" Name="Description" Nullable="true" />
+          <NavigationProperty Name="SourceAccount" Relationship="TafelModel.AdditionalRecordAccount" FromRole="AdditionalRecord" ToRole="Account" />
+          <NavigationProperty Name="TargetAccount" Relationship="TafelModel.AccountBooking" FromRole="Booking" ToRole="Account" />
+          <NavigationProperty Name="UserAccount" Relationship="TafelModel.UserAccountBooking" FromRole="Booking" ToRole="UserAccount" />
+          <Property Type="Boolean" Name="IsCorrection" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="TafelModel.PersonBooking" FromRole="Booking" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="RevenueType">
+          <Key>
+            <PropertyRef Name="RevenueTypeID" />
+          </Key>
+          <Property Type="Int32" Name="RevenueTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Entität1" Relationship="TafelModel.RevenueTypeEntität1" FromRole="RevenueType" ToRole="Entität1" />
+        </EntityType>
+        <EntityType Name="UserAccount">
+          <Key>
+            <PropertyRef Name="UserAccountID" />
+          </Key>
+          <Property Type="Int32" Name="UserAccountID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Username" Nullable="false" />
+          <Property Type="String" Name="Password" Nullable="false" />
+          <Property Type="Boolean" Name="IsAdmin" Nullable="false" DefaultValue="False" />
+          <Property Type="String" Name="ImageName" Nullable="true" />
+          <NavigationProperty Name="Person" Relationship="TafelModel.UserAccountPerson" FromRole="UserAccount" ToRole="Person" />
+          <NavigationProperty Name="Booking" Relationship="TafelModel.UserAccountBooking" FromRole="UserAccount" ToRole="Booking" />
+          <NavigationProperty Name="CashClosure" Relationship="TafelModel.UserAccountCashClosure" FromRole="UserAccount" ToRole="CashClosure" />
+          <NavigationProperty Name="CashClosureReport" Relationship="TafelModel.UserAccountCashClosureReport" FromRole="UserAccount" ToRole="CashClosureReport" />
+          <NavigationProperty Name="CashClosureReport_1" Relationship="TafelModel.UserAccountCashClosureReport1" FromRole="UserAccount" ToRole="CashClosureReport" />
+          <NavigationProperty Name="CashClosureReceipt" Relationship="TafelModel.UserAccountCashClosureReceipt" FromRole="UserAccount" ToRole="CashClosureReceipt" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Child">
+          <Key>
+            <PropertyRef Name="ChildID" />
+          </Key>
+          <Property Type="Int32" Name="ChildID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FirstName" Nullable="false" />
+          <Property Type="String" Name="LastName" Nullable="false" />
+          <Property Type="DateTime" Name="DateOfBirth" Nullable="false" />
+          <Property Type="Boolean" Name="IsFemale" Nullable="false" DefaultValue="False" />
+          <NavigationProperty Name="Person" Relationship="TafelModel.PersonChild" FromRole="Child" ToRole="Person" />
+          <Property Type="DateTime" Name="LastModified" Nullable="true" />
+        </EntityType>
+        <Association Name="PersonChild">
+          <End Type="TafelModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="TafelModel.Child" Role="Child" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Sponsor">
+          <Key>
+            <PropertyRef Name="SponsorID" />
+          </Key>
+          <Property Type="Int32" Name="SponsorID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="String" Name="Street" Nullable="false" />
+          <Property Type="String" Name="City" Nullable="false" />
+          <Property Type="Int32" Name="ZipCode" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" />
+          <Property Type="String" Name="LastName" Nullable="false" />
+          <Property Type="String" Name="MobileNo" Nullable="true" />
+          <Property Type="String" Name="PhoneNo" Nullable="true" />
+          <Property Type="String" Name="FaxNo" Nullable="true" />
+          <Property Type="String" Name="Email" Nullable="true" />
+          <Property Type="String" Name="ContactPerson" Nullable="true" />
+          <Property Type="Boolean" Name="IsFormLetterAllowed" Nullable="false" DefaultValue="True" />
+          <NavigationProperty Name="FundingType" Relationship="TafelModel.FundingTypeSponsor" FromRole="Sponsor" ToRole="FundingType" />
+          <NavigationProperty Name="Title" Relationship="TafelModel.TitleSponsor" FromRole="Sponsor" ToRole="Title" />
+          <Property Type="DateTime" Name="LastModified" Nullable="true" />
+          <Property Type="String" Name="CompanyName" Nullable="true" />
+          <Property Type="Boolean" Name="IsCompany" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FundingType">
+          <Key>
+            <PropertyRef Name="FundingTypeID" />
+          </Key>
+          <Property Type="Int32" Name="FundingTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Sponsor" Relationship="TafelModel.FundingTypeSponsor" FromRole="FundingType" ToRole="Sponsor" />
+        </EntityType>
+        <Association Name="TeamTitle">
+          <End Type="TafelModel.Team" Role="Team" Multiplicity="*" />
+          <End Type="TafelModel.Title" Role="Title" Multiplicity="1" />
+        </Association>
+        <Association Name="TeamFunctionTeam">
+          <End Type="TafelModel.TeamFunction" Role="TeamFunction" Multiplicity="1" />
+          <End Type="TafelModel.Team" Role="Team" Multiplicity="*" />
+        </Association>
+        <Association Name="FundingTypeSponsor">
+          <End Type="TafelModel.FundingType" Role="FundingType" Multiplicity="1" />
+          <End Type="TafelModel.Sponsor" Role="Sponsor" Multiplicity="*" />
+        </Association>
+        <Association Name="TitleSponsor">
+          <End Type="TafelModel.Title" Role="Title" Multiplicity="1" />
+          <End Type="TafelModel.Sponsor" Role="Sponsor" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Note">
+          <Key>
+            <PropertyRef Name="NoteID" />
+          </Key>
+          <Property Type="Int32" Name="NoteID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="String" Name="Description" Nullable="false" />
+          <Property Type="DateTime" Name="CreationDate" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="AccountID" />
+          </Key>
+          <Property Type="Int32" Name="AccountID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Int32" Name="Number" Nullable="false" />
+          <Property Type="String" Name="Description" Nullable="true" />
+          <NavigationProperty Name="Booking" Relationship="TafelModel.AccountBooking" FromRole="Account" ToRole="Booking" />
+          <Property Type="Boolean" Name="IsOfficial" Nullable="false" />
+          <Property Type="Int32" Name="ZeroPeriod" Nullable="false" />
+          <Property Type="Double" Name="LatestBalance" Nullable="false" />
+          <Property Type="Boolean" Name="IsFixed" Nullable="false" />
+          <Property Type="Boolean" Name="IsCapital" Nullable="false" />
+        </EntityType>
+        <Association Name="AdditionalRecordAccount">
+          <End Type="TafelModel.Booking" Role="AdditionalRecord" Multiplicity="*" />
+          <End Type="TafelModel.Account" Role="Account" Multiplicity="1" />
+        </Association>
+        <Association Name="FamilyStatePerson">
+          <End Type="TafelModel.FamilyState" Role="FamilyState" Multiplicity="1" />
+          <End Type="TafelModel.Person" Role="Person" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Filter">
+          <Key>
+            <PropertyRef Name="FilterID" />
+          </Key>
+          <Property Type="Int32" Name="FilterID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Table" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="false" />
+          <Property Type="String" Name="Operation" Nullable="false" />
+          <Property Type="String" Name="Value" Nullable="false" />
+          <NavigationProperty Name="FilterSet" Relationship="TafelModel.FilterSetFilter" FromRole="Filter" ToRole="FilterSet" />
+        </EntityType>
+        <EntityType Name="FilterSet">
+          <Key>
+            <PropertyRef Name="FilterSetID" />
+          </Key>
+          <Property Type="Int32" Name="FilterSetID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="String" Name="Linking" Nullable="false" />
+          <NavigationProperty Name="FormletterPattern" Relationship="TafelModel.FormletterPatternFilterSet" FromRole="FilterSet" ToRole="FormletterPattern" />
+          <NavigationProperty Name="Filter" Relationship="TafelModel.FilterSetFilter" FromRole="FilterSet" ToRole="Filter" />
+        </EntityType>
+        <EntityType Name="FormletterPattern">
+          <Key>
+            <PropertyRef Name="FormletterPatternID" />
+          </Key>
+          <Property Type="Int32" Name="FormletterPatternID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="String" Name="SaluationM" Nullable="false" />
+          <Property Type="String" Name="SaluationF" Nullable="false" />
+          <Property Type="String" Name="SaluationNT" Nullable="false" />
+          <Property Type="String" Name="FileName" Nullable="false" />
+          <Property Type="String" Name="Text" Nullable="false" />
+          <NavigationProperty Name="FilterSet" Relationship="TafelModel.FormletterPatternFilterSet" FromRole="FormletterPattern" ToRole="FilterSet" />
+          <NavigationProperty Name="ColumnAssignment" Relationship="TafelModel.FormletterPatternColumnAssignment" FromRole="FormletterPattern" ToRole="ColumnAssignment" />
+        </EntityType>
+        <EntityType Name="ColumnAssignment">
+          <Key>
+            <PropertyRef Name="ColumnAssignmentID" />
+          </Key>
+          <Property Type="Int32" Name="ColumnAssignmentID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CsvColumn" Nullable="false" />
+          <Property Type="String" Name="DatabaseTable" Nullable="false" />
+          <Property Type="String" Name="DatabaseColumn" Nullable="false" />
+          <NavigationProperty Name="FormletterPattern" Relationship="TafelModel.FormletterPatternColumnAssignment" FromRole="ColumnAssignment" ToRole="FormletterPattern" />
+        </EntityType>
+        <Association Name="TitlePerson">
+          <End Type="TafelModel.Title" Role="Title" Multiplicity="0..1" />
+          <End Type="TafelModel.Person" Role="Person" Multiplicity="*" />
+        </Association>
+        <Association Name="FormletterPatternFilterSet">
+          <End Type="TafelModel.FormletterPattern" Role="FormletterPattern" Multiplicity="0..1" />
+          <End Type="TafelModel.FilterSet" Role="FilterSet" Multiplicity="*" />
+        </Association>
+        <Association Name="FilterSetFilter">
+          <End Type="TafelModel.FilterSet" Role="FilterSet" Multiplicity="1" />
+          <End Type="TafelModel.Filter" Role="Filter" Multiplicity="*" />
+        </Association>
+        <Association Name="FormletterPatternColumnAssignment">
+          <End Type="TafelModel.FormletterPattern" Role="FormletterPattern" Multiplicity="1" />
+          <End Type="TafelModel.ColumnAssignment" Role="ColumnAssignment" Multiplicity="*" />
+        </Association>
+        <Association Name="UserAccountPerson">
+          <End Type="TafelModel.UserAccount" Role="UserAccount" Multiplicity="0..1" />
+          <End Type="TafelModel.Person" Role="Person" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Revenue">
+          <Key>
+            <PropertyRef Name="RevenueID" />
+          </Key>
+          <Property Type="Int32" Name="RevenueID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="RevenueType" Relationship="TafelModel.RevenueTypeEntität1" FromRole="Entität1" ToRole="RevenueType" />
+          <NavigationProperty Name="Person" Relationship="TafelModel.PersonEntität1" FromRole="Entität1" ToRole="Person" />
+          <Property Type="Double" Name="Amount" Nullable="false" />
+          <Property Type="DateTime" Name="StartDate" Nullable="false" />
+          <Property Type="DateTime" Name="EndDate" Nullable="true" />
+          <Property Type="String" Name="Description" Nullable="true" />
+        </EntityType>
+        <Association Name="RevenueTypeEntität1">
+          <End Type="TafelModel.RevenueType" Role="RevenueType" Multiplicity="1" />
+          <End Type="TafelModel.Revenue" Role="Entität1" Multiplicity="*" />
+        </Association>
+        <Association Name="PersonEntität1">
+          <End Type="TafelModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="TafelModel.Revenue" Role="Entität1" Multiplicity="*" />
+        </Association>
+        <Association Name="AccountBooking">
+          <End Type="TafelModel.Account" Role="Account" Multiplicity="1" />
+          <End Type="TafelModel.Booking" Role="Booking" Multiplicity="*" />
+        </Association>
+        <Association Name="UserAccountBooking">
+          <End Type="TafelModel.UserAccount" Role="UserAccount" Multiplicity="0..1" />
+          <End Type="TafelModel.Booking" Role="Booking" Multiplicity="*" />
+        </Association>
+        <EntityType Name="CashClosure">
+          <Key>
+            <PropertyRef Name="CashClosureID" />
+          </Key>
+          <Property Type="Int32" Name="CashClosureID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Comment" Nullable="true" />
+          <NavigationProperty Name="ClosureUserAccount" Relationship="TafelModel.UserAccountCashClosure" FromRole="CashClosure" ToRole="UserAccount" />
+          <Property Type="DateTime" Name="ClosureDate" Nullable="false" />
+          <NavigationProperty Name="CashClosureReport" Relationship="TafelModel.CashClosureCashClosureReport" FromRole="CashClosure" ToRole="CashClosureReport" />
+          <NavigationProperty Name="CashClosureReceipt" Relationship="TafelModel.CashClosureCashClosureReceipt" FromRole="CashClosure" ToRole="CashClosureReceipt" />
+          <Property Type="Double" Name="Sum" Nullable="false" />
+          <Property Type="Double" Name="Revenue" Nullable="false" />
+          <Property Type="Double" Name="Expense" Nullable="false" />
+        </EntityType>
+        <Association Name="UserAccountCashClosure">
+          <End Type="TafelModel.UserAccount" Role="UserAccount" Multiplicity="1" />
+          <End Type="TafelModel.CashClosure" Role="CashClosure" Multiplicity="*" />
+        </Association>
+        <EntityType Name="CashClosureReport">
+          <Key>
+            <PropertyRef Name="CashClosureReportID" />
+          </Key>
+          <Property Type="Int32" Name="CashClosureReportID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="CashClosure" Relationship="TafelModel.CashClosureCashClosureReport" FromRole="CashClosureReport" ToRole="CashClosure" />
+          <Property Type="Boolean" Name="PrintDone" Nullable="false" />
+          <Property Type="DateTime" Name="PrintDate" Nullable="true" />
+          <NavigationProperty Name="PrintUserAccount" Relationship="TafelModel.UserAccountCashClosureReport" FromRole="CashClosureReport" ToRole="UserAccount" />
+          <Property Type="Boolean" Name="Done" Nullable="false" />
+          <Property Type="DateTime" Name="DoneDate" Nullable="true" />
+          <NavigationProperty Name="DoneUserAccount" Relationship="TafelModel.UserAccountCashClosureReport1" FromRole="CashClosureReport" ToRole="UserAccount" />
+        </EntityType>
+        <Association Name="CashClosureCashClosureReport">
+          <End Type="TafelModel.CashClosure" Role="CashClosure" Multiplicity="1" />
+          <End Type="TafelModel.CashClosureReport" Role="CashClosureReport" Multiplicity="*" />
+        </Association>
+        <Association Name="UserAccountCashClosureReport">
+          <End Type="TafelModel.UserAccount" Role="UserAccount" Multiplicity="0..1" />
+          <End Type="TafelModel.CashClosureReport" Role="CashClosureReport" Multiplicity="*" />
+        </Association>
+        <Association Name="UserAccountCashClosureReport1">
+          <End Type="TafelModel.UserAccount" Role="UserAccount" Multiplicity="0..1" />
+          <End Type="TafelModel.CashClosureReport" Role="CashClosureReport" Multiplicity="*" />
+        </Association>
+        <EntityType Name="CashClosureReceipt">
+          <Key>
+            <PropertyRef Name="CashClosureReceiptID" />
+          </Key>
+          <Property Type="Int32" Name="CashClosureReceiptID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="CashClosure" Relationship="TafelModel.CashClosureCashClosureReceipt" FromRole="CashClosureReceipt" ToRole="CashClosure" />
+          <Property Type="Boolean" Name="PrintDone" Nullable="false" />
+          <Property Type="DateTime" Name="PrintDate" Nullable="true" />
+          <NavigationProperty Name="PrintUserAccount" Relationship="TafelModel.UserAccountCashClosureReceipt" FromRole="CashClosureReceipt" ToRole="UserAccount" />
+          </EntityType>
+        <Association Name="CashClosureCashClosureReceipt">
+          <End Type="TafelModel.CashClosure" Role="CashClosure" Multiplicity="1" />
+          <End Type="TafelModel.CashClosureReceipt" Role="CashClosureReceipt" Multiplicity="*" />
+        </Association>
+        <Association Name="UserAccountCashClosureReceipt">
+          <End Type="TafelModel.UserAccount" Role="UserAccount" Multiplicity="0..1" />
+          <End Type="TafelModel.CashClosureReceipt" Role="CashClosureReceipt" Multiplicity="*" />
+        </Association>
+        <Association Name="PersonBooking">
+          <End Type="TafelModel.Person" Role="Person" Multiplicity="0..1" />
+          <End Type="TafelModel.Booking" Role="Booking" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TafelModelStoreContainer" CdmEntityContainer="TafelModelContainer">
+    <EntitySetMapping Name="Persons">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Person)">
+        <MappingFragment StoreEntitySet="Persons">
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="CountryOfBirth" ColumnName="CountryOfBirth" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="ValidityStart" ColumnName="ValidityStart" />
+          <ScalarProperty Name="ValidityEnd" ColumnName="ValidityEnd" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="MaritalFirstName" ColumnName="MaritalFirstName" />
+          <ScalarProperty Name="MaritalLastName" ColumnName="MaritalLastName" />
+          <ScalarProperty Name="MaritalBirthday" ColumnName="MaritalBirthday" />
+          <ScalarProperty Name="MaritalNationality" ColumnName="MaritalNationality" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="LastPurchase" ColumnName="LastPurchase" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="TableNo" ColumnName="TableNo" />
+          <ScalarProperty Name="MaritalCountryOfBirth" ColumnName="MaritalCountryOfBirth" />
+          <ScalarProperty Name="MaritalMobile" ColumnName="MaritalMobile" />
+          <ScalarProperty Name="MaritalPhone" ColumnName="MaritalPhone" />
+          <ScalarProperty Name="MaritalEmail" ColumnName="MaritalEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Titles">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Title)">
+        <MappingFragment StoreEntitySet="Titles">
+          <ScalarProperty Name="TitleID" ColumnName="TitleID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FamilyStates">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.FamilyState)">
+        <MappingFragment StoreEntitySet="FamilyStates">
+          <ScalarProperty Name="FamilyStateID" ColumnName="FamilyStateID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="NumberOfPerson" ColumnName="NumberOfPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Team)">
+        <MappingFragment StoreEntitySet="Teams">
+          <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IsFormLetterAllowed" ColumnName="IsFormLetterAllowed" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamFunctions">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.TeamFunction)">
+        <MappingFragment StoreEntitySet="TeamFunctions">
+          <ScalarProperty Name="TeamFunctionID" ColumnName="TeamFunctionID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bookings">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Booking)">
+        <MappingFragment StoreEntitySet="Bookings">
+          <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsCorrection" ColumnName="IsCorrection" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RevenueTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.RevenueType)">
+        <MappingFragment StoreEntitySet="RevenueTypes">
+          <ScalarProperty Name="RevenueTypeID" ColumnName="RevenueTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserAccounts">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.UserAccount)">
+        <MappingFragment StoreEntitySet="UserAccounts">
+          <ScalarProperty Name="UserAccountID" ColumnName="UserAccountID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Children">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Child)">
+        <MappingFragment StoreEntitySet="Children">
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="IsFemale" ColumnName="IsFemale" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sponsors">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Sponsor)">
+        <MappingFragment StoreEntitySet="Sponsors">
+          <ScalarProperty Name="SponsorID" ColumnName="SponsorID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="IsFormLetterAllowed" ColumnName="IsFormLetterAllowed" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="IsCompany" ColumnName="IsCompany" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FundingTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.FundingType)">
+        <MappingFragment StoreEntitySet="FundingTypes">
+          <ScalarProperty Name="FundingTypeID" ColumnName="FundingTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notes">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Note)">
+        <MappingFragment StoreEntitySet="Notes">
+          <ScalarProperty Name="NoteID" ColumnName="NoteID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Account)">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsOfficial" ColumnName="IsOfficial" />
+          <ScalarProperty Name="ZeroPeriod" ColumnName="ZeroPeriod" />
+          <ScalarProperty Name="LatestBalance" ColumnName="LatestBalance" />
+          <ScalarProperty Name="IsFixed" ColumnName="IsFixed" />
+          <ScalarProperty Name="IsCapital" ColumnName="IsCapital" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filters">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Filter)">
+        <MappingFragment StoreEntitySet="Filters">
+          <ScalarProperty Name="FilterID" ColumnName="FilterID" />
+          <ScalarProperty Name="Table" ColumnName="Table" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FilterSets">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.FilterSet)">
+        <MappingFragment StoreEntitySet="FilterSets">
+          <ScalarProperty Name="FilterSetID" ColumnName="FilterSetID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Linking" ColumnName="Linking" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormletterPatterns">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.FormletterPattern)">
+        <MappingFragment StoreEntitySet="FormletterPatterns">
+          <ScalarProperty Name="FormletterPatternID" ColumnName="FormletterPatternID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SaluationM" ColumnName="SaluationM" />
+          <ScalarProperty Name="SaluationF" ColumnName="SaluationF" />
+          <ScalarProperty Name="SaluationNT" ColumnName="SaluationNT" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ColumnAssignments">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.ColumnAssignment)">
+        <MappingFragment StoreEntitySet="ColumnAssignments">
+          <ScalarProperty Name="ColumnAssignmentID" ColumnName="ColumnAssignmentID" />
+          <ScalarProperty Name="CsvColumn" ColumnName="CsvColumn" />
+          <ScalarProperty Name="DatabaseTable" ColumnName="DatabaseTable" />
+          <ScalarProperty Name="DatabaseColumn" ColumnName="DatabaseColumn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Revenues">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.Revenue)">
+        <MappingFragment StoreEntitySet="Revenues">
+          <ScalarProperty Name="RevenueID" ColumnName="RevenueID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashClosures">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.CashClosure)">
+        <MappingFragment StoreEntitySet="CashClosures">
+          <ScalarProperty Name="CashClosureID" ColumnName="CashClosureID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="ClosureDate" ColumnName="ClosureDate" />
+          <ScalarProperty Name="Sum" ColumnName="Sum" />
+          <ScalarProperty Name="Revenue" ColumnName="Revenue" />
+          <ScalarProperty Name="Expense" ColumnName="Expense" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashClosureReports">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.CashClosureReport)">
+        <MappingFragment StoreEntitySet="CashClosureReports">
+          <ScalarProperty Name="CashClosureReportID" ColumnName="CashClosureReportID" />
+          <ScalarProperty Name="PrintDone" ColumnName="PrintDone" />
+          <ScalarProperty Name="PrintDate" ColumnName="PrintDate" />
+          <ScalarProperty Name="Done" ColumnName="Done" />
+          <ScalarProperty Name="DoneDate" ColumnName="DoneDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashClosureReceipts">
+      <EntityTypeMapping TypeName="IsTypeOf(TafelModel.CashClosureReceipt)">
+        <MappingFragment StoreEntitySet="CashClosureReceipts">
+          <ScalarProperty Name="CashClosureReceiptID" ColumnName="CashClosureReceiptID" />
+          <ScalarProperty Name="PrintDone" ColumnName="PrintDone" />
+          <ScalarProperty Name="PrintDate" ColumnName="PrintDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="PersonTitle" TypeName="TafelModel.PersonTitle" StoreEntitySet="Persons">
+      <EndProperty Name="Title">
+        <ScalarProperty Name="TitleID" ColumnName="Title_TitleID" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonChild" TypeName="TafelModel.PersonChild" StoreEntitySet="Children">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="Person_PersonID" />
+      </EndProperty>
+      <EndProperty Name="Child">
+        <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TeamTitle" TypeName="TafelModel.TeamTitle" StoreEntitySet="Teams">
+      <EndProperty Name="Title">
+        <ScalarProperty Name="TitleID" ColumnName="Title_TitleID" />
+      </EndProperty>
+      <EndProperty Name="Team">
+        <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TeamFunctionTeam" TypeName="TafelModel.TeamFunctionTeam" StoreEntitySet="Teams">
+      <EndProperty Name="TeamFunction">
+        <ScalarProperty Name="TeamFunctionID" ColumnName="TeamFunction_TeamFunctionID" />
+      </EndProperty>
+      <EndProperty Name="Team">
+        <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FundingTypeSponsor" TypeName="TafelModel.FundingTypeSponsor" StoreEntitySet="Sponsors">
+      <EndProperty Name="FundingType">
+        <ScalarProperty Name="FundingTypeID" ColumnName="FundingType_FundingTypeID" />
+      </EndProperty>
+      <EndProperty Name="Sponsor">
+        <ScalarProperty Name="SponsorID" ColumnName="SponsorID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TitleSponsor" TypeName="TafelModel.TitleSponsor" StoreEntitySet="Sponsors">
+      <EndProperty Name="Title">
+        <ScalarProperty Name="TitleID" ColumnName="Title_TitleID" />
+      </EndProperty>
+      <EndProperty Name="Sponsor">
+        <ScalarProperty Name="SponsorID" ColumnName="SponsorID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AdditionalRecordAccount" TypeName="TafelModel.AdditionalRecordAccount" StoreEntitySet="Bookings">
+      <EndProperty Name="Account">
+        <ScalarProperty Name="AccountID" ColumnName="SourceAccount_AccountID" />
+      </EndProperty>
+      <EndProperty Name="AdditionalRecord">
+        <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FamilyStatePerson" TypeName="TafelModel.FamilyStatePerson" StoreEntitySet="Persons">
+      <EndProperty Name="FamilyState">
+        <ScalarProperty Name="FamilyStateID" ColumnName="FamilyState_FamilyStateID" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TitlePerson" TypeName="TafelModel.TitlePerson" StoreEntitySet="Persons">
+      <EndProperty Name="Title">
+        <ScalarProperty Name="TitleID" ColumnName="MaritalTitle_TitleID" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+      </EndProperty>
+      <Condition ColumnName="MaritalTitle_TitleID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FormletterPatternFilterSet" TypeName="TafelModel.FormletterPatternFilterSet" StoreEntitySet="FilterSets">
+      <EndProperty Name="FormletterPattern">
+        <ScalarProperty Name="FormletterPatternID" ColumnName="FormletterPattern_FormletterPatternID" />
+      </EndProperty>
+      <EndProperty Name="FilterSet">
+        <ScalarProperty Name="FilterSetID" ColumnName="FilterSetID" />
+      </EndProperty>
+      <Condition ColumnName="FormletterPattern_FormletterPatternID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FilterSetFilter" TypeName="TafelModel.FilterSetFilter" StoreEntitySet="Filters">
+      <EndProperty Name="FilterSet">
+        <ScalarProperty Name="FilterSetID" ColumnName="FilterSet_FilterSetID" />
+      </EndProperty>
+      <EndProperty Name="Filter">
+        <ScalarProperty Name="FilterID" ColumnName="FilterID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FormletterPatternColumnAssignment" TypeName="TafelModel.FormletterPatternColumnAssignment" StoreEntitySet="ColumnAssignments">
+      <EndProperty Name="FormletterPattern">
+        <ScalarProperty Name="FormletterPatternID" ColumnName="FormletterPattern_FormletterPatternID" />
+      </EndProperty>
+      <EndProperty Name="ColumnAssignment">
+        <ScalarProperty Name="ColumnAssignmentID" ColumnName="ColumnAssignmentID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserAccountPerson" TypeName="TafelModel.UserAccountPerson" StoreEntitySet="Persons">
+      <EndProperty Name="UserAccount">
+        <ScalarProperty Name="UserAccountID" ColumnName="UserAccount_UserAccountID" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+      </EndProperty>
+      <Condition ColumnName="UserAccount_UserAccountID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RevenueTypeEntität1" TypeName="TafelModel.RevenueTypeEntität1" StoreEntitySet="Revenues">
+      <EndProperty Name="RevenueType">
+        <ScalarProperty Name="RevenueTypeID" ColumnName="RevenueType_RevenueTypeID" />
+      </EndProperty>
+      <EndProperty Name="Entität1">
+        <ScalarProperty Name="RevenueID" ColumnName="RevenueID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonEntität1" TypeName="TafelModel.PersonEntität1" StoreEntitySet="Revenues">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="Person_PersonID" />
+      </EndProperty>
+      <EndProperty Name="Entität1">
+        <ScalarProperty Name="RevenueID" ColumnName="RevenueID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AccountBooking" TypeName="TafelModel.AccountBooking" StoreEntitySet="Bookings">
+      <EndProperty Name="Account">
+        <ScalarProperty Name="AccountID" ColumnName="TargetAccount_AccountID" />
+      </EndProperty>
+      <EndProperty Name="Booking">
+        <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserAccountBooking" TypeName="TafelModel.UserAccountBooking" StoreEntitySet="Bookings">
+      <EndProperty Name="UserAccount">
+        <ScalarProperty Name="UserAccountID" ColumnName="UserAccount_UserAccountID" />
+      </EndProperty>
+      <EndProperty Name="Booking">
+        <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+      </EndProperty>
+      <Condition ColumnName="UserAccount_UserAccountID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserAccountCashClosure" TypeName="TafelModel.UserAccountCashClosure" StoreEntitySet="CashClosures">
+      <EndProperty Name="UserAccount">
+        <ScalarProperty Name="UserAccountID" ColumnName="ClosureUserAccount_UserAccountID" />
+      </EndProperty>
+      <EndProperty Name="CashClosure">
+        <ScalarProperty Name="CashClosureID" ColumnName="CashClosureID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CashClosureCashClosureReport" TypeName="TafelModel.CashClosureCashClosureReport" StoreEntitySet="CashClosureReports">
+      <EndProperty Name="CashClosure">
+        <ScalarProperty Name="CashClosureID" ColumnName="CashClosure_CashClosureID" />
+      </EndProperty>
+      <EndProperty Name="CashClosureReport">
+        <ScalarProperty Name="CashClosureReportID" ColumnName="CashClosureReportID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserAccountCashClosureReport" TypeName="TafelModel.UserAccountCashClosureReport" StoreEntitySet="CashClosureReports">
+      <EndProperty Name="UserAccount">
+        <ScalarProperty Name="UserAccountID" ColumnName="PrintUserAccount_UserAccountID" />
+      </EndProperty>
+      <EndProperty Name="CashClosureReport">
+        <ScalarProperty Name="CashClosureReportID" ColumnName="CashClosureReportID" />
+      </EndProperty>
+      <Condition ColumnName="PrintUserAccount_UserAccountID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserAccountCashClosureReport1" TypeName="TafelModel.UserAccountCashClosureReport1" StoreEntitySet="CashClosureReports">
+      <EndProperty Name="UserAccount">
+        <ScalarProperty Name="UserAccountID" ColumnName="DoneUserAccount_UserAccountID" />
+      </EndProperty>
+      <EndProperty Name="CashClosureReport">
+        <ScalarProperty Name="CashClosureReportID" ColumnName="CashClosureReportID" />
+      </EndProperty>
+      <Condition ColumnName="DoneUserAccount_UserAccountID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CashClosureCashClosureReceipt" TypeName="TafelModel.CashClosureCashClosureReceipt" StoreEntitySet="CashClosureReceipts">
+      <EndProperty Name="CashClosure">
+        <ScalarProperty Name="CashClosureID" ColumnName="CashClosure_CashClosureID" />
+      </EndProperty>
+      <EndProperty Name="CashClosureReceipt">
+        <ScalarProperty Name="CashClosureReceiptID" ColumnName="CashClosureReceiptID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserAccountCashClosureReceipt" TypeName="TafelModel.UserAccountCashClosureReceipt" StoreEntitySet="CashClosureReceipts">
+      <EndProperty Name="UserAccount">
+        <ScalarProperty Name="UserAccountID" ColumnName="PrintUserAccount_UserAccountID" />
+      </EndProperty>
+      <EndProperty Name="CashClosureReceipt">
+        <ScalarProperty Name="CashClosureReceiptID" ColumnName="CashClosureReceiptID" />
+      </EndProperty>
+      <Condition ColumnName="PrintUserAccount_UserAccountID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PersonBooking" TypeName="TafelModel.PersonBooking" StoreEntitySet="Bookings">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonID" ColumnName="Person_PersonID" />
+      </EndProperty>
+      <EndProperty Name="Booking">
+        <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+      </EndProperty>
+      <Condition ColumnName="Person_PersonID" IsNull="false" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="TafelModel" ZoomLevel="35" >
+        <EntityTypeShape EntityType="TafelModel.Person" Width="2" PointX="0.5" PointY="0.75" Height="6.6870735677083326" />
+        <EntityTypeShape EntityType="TafelModel.Title" Width="1.5" PointX="3.125" PointY="0.875" Height="2.172587890625" />
+        <AssociationConnector Association="TafelModel.PersonTitle">
+          <ConnectorPoint PointX="2.5" PointY="2.1383239746093752" />
+          <ConnectorPoint PointX="3.125" PointY="2.1383239746093752" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="TafelModel.FamilyState" Width="1.5" PointX="3.125" PointY="3.375" Height="1.9802864583333335" />
+        <EntityTypeShape EntityType="TafelModel.Team" Width="1.5" PointX="5.75" PointY="1" Height="3.9033007812499996" />
+        <EntityTypeShape EntityType="TafelModel.TeamFunction" Width="1.5" PointX="8.125" PointY="1" Height="1.59568359375" />
+        <EntityTypeShape EntityType="TafelModel.Booking" Width="2" PointX="5.5" PointY="5.125" Height="2.5571907552083335" />
+        <EntityTypeShape EntityType="TafelModel.RevenueType" Width="1.5" PointX="0.625" PointY="11.875" Height="1.5956835937499996" />
+        <EntityTypeShape EntityType="TafelModel.UserAccount" Width="1.5" PointX="5.75" PointY="8.125" Height="2.9070849609374996" />
+        <EntityTypeShape EntityType="TafelModel.Child" Width="1.5" PointX="3" PointY="5.75" Height="2.3648893229166656" />
+        <AssociationConnector Association="TafelModel.PersonChild">
+          <ConnectorPoint PointX="2.5" PointY="6.5935367838541659" />
+          <ConnectorPoint PointX="3" PointY="6.5935367838541659" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="TafelModel.Sponsor" Width="2.5" PointX="11.5" PointY="0.5" Height="3.8931689453124996" />
+        <EntityTypeShape EntityType="TafelModel.FundingType" Width="1.5" PointX="9.375" PointY="3" Height="1.5956835937499996" />
+        <AssociationConnector Association="TafelModel.TeamTitle">
+          <ConnectorPoint PointX="5.75" PointY="2.0237939453125" />
+          <ConnectorPoint PointX="4.625" PointY="2.0237939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.TeamFunctionTeam">
+          <ConnectorPoint PointX="8.125" PointY="1.797841796875" />
+          <ConnectorPoint PointX="7.25" PointY="1.797841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.FundingTypeSponsor">
+          <ConnectorPoint PointX="10.875" PointY="3.69658447265625" />
+          <ConnectorPoint PointX="11.5" PointY="3.69658447265625" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.TitleSponsor">
+          <ConnectorPoint PointX="4.625" PointY="0.90625" />
+          <ConnectorPoint PointX="11.5" PointY="0.90625" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="TafelModel.Note" Width="1.5" PointX="7.625" PointY="2.875" Height="1.7879850260416657" />
+        <EntityTypeShape EntityType="TafelModel.Account" Width="1.5" PointX="8.125" PointY="5.125" Height="2.5783902994791665" />
+        <AssociationConnector Association="TafelModel.AdditionalRecordAccount">
+          <ConnectorPoint PointX="7.5" PointY="6.769176829333106" />
+          <ConnectorPoint PointX="8.125" PointY="6.769176829333106" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.FamilyStatePerson">
+          <ConnectorPoint PointX="3.125" PointY="4.2533268229166667" />
+          <ConnectorPoint PointX="2.5" PointY="4.2533268229166667" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="TafelModel.Filter" Width="1.5" PointX="10.125" PointY="5.125" Height="1.9210009765624996" />
+        <EntityTypeShape EntityType="TafelModel.FilterSet" Width="1.5" PointX="12.25" PointY="5.125" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="TafelModel.FormletterPattern" Width="1.75" PointX="14.625" PointY="5.375" Height="2.7494921874999996" />
+        <EntityTypeShape EntityType="TafelModel.ColumnAssignment" Width="2.5" PointX="14.25" PointY="2.75" Height="1.9802864583333317" />
+        <AssociationConnector Association="TafelModel.TitlePerson">
+          <ConnectorPoint PointX="3.125" PointY="1.4441619873046876" />
+          <ConnectorPoint PointX="2.5" PointY="1.4441619873046876" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.FormletterPatternFilterSet">
+          <ConnectorPoint PointX="14.625" PointY="6.2401432291666667" />
+          <ConnectorPoint PointX="13.75" PointY="6.2401432291666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.FilterSetFilter">
+          <ConnectorPoint PointX="12.25" PointY="6.0033268229166659" />
+          <ConnectorPoint PointX="11.625" PointY="6.0033268229166659" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.FormletterPatternColumnAssignment">
+          <ConnectorPoint PointX="15.5" PointY="5.375" />
+          <ConnectorPoint PointX="15.5" PointY="4.7302864583333317" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.UserAccountPerson">
+          <ConnectorPoint PointX="5.75" PointY="8.6353111643633085" />
+          <ConnectorPoint PointX="2.34375" PointY="8.6353111643633085" />
+          <ConnectorPoint PointX="2.34375" PointY="7.4370735677083326" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="TafelModel.Revenue" Width="1.5" PointX="0.625" PointY="8.875" Height="2.3648893229166674" />
+        <AssociationConnector Association="TafelModel.RevenueTypeEntität1">
+          <ConnectorPoint PointX="1.375" PointY="11.875" />
+          <ConnectorPoint PointX="1.375" PointY="11.239889322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.PersonEntität1">
+          <ConnectorPoint PointX="1.375" PointY="7.4370735677083326" />
+          <ConnectorPoint PointX="1.375" PointY="8.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.AccountBooking">
+          <ConnectorPoint PointX="8.125" PointY="5.8845884146665526" />
+          <ConnectorPoint PointX="7.5" PointY="5.8845884146665526" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.UserAccountBooking">
+          <ConnectorPoint PointX="6.5" PointY="8.125" />
+          <ConnectorPoint PointX="6.5" PointY="7.3746956380208326" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="TafelModel.CashClosure" Width="2" PointX="6.5" PointY="12" Height="2.4140429687499996" />
+        <AssociationConnector Association="TafelModel.UserAccountCashClosure">
+          <ConnectorPoint PointX="6.875" PointY="11.0320849609375" />
+          <ConnectorPoint PointX="6.875" PointY="12" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="TafelModel.CashClosureReport" Width="2.125" PointX="8.375" PointY="8.5" Height="2.2496956380208335" />
+        <AssociationConnector Association="TafelModel.CashClosureCashClosureReport">
+          <ConnectorPoint PointX="8.5" PointY="13.207021484375" />
+          <ConnectorPoint PointX="9.5000004999999987" PointY="13.207021484375" />
+          <ConnectorPoint PointX="9.5000004999999987" PointY="10.749695638020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.UserAccountCashClosureReport">
+          <ConnectorPoint PointX="7.25" PointY="9.3697518920898446" />
+          <ConnectorPoint PointX="8.375" PointY="9.3697518920898446" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.UserAccountCashClosureReport1">
+          <ConnectorPoint PointX="7.25" PointY="10.122223765055338" />
+          <ConnectorPoint PointX="8.375" PointY="10.122223765055338" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="TafelModel.CashClosureReceipt" Width="2.25" PointX="2.75" PointY="8.875" Height="1.7566536458333335" />
+        <AssociationConnector Association="TafelModel.CashClosureCashClosureReceipt">
+          <ConnectorPoint PointX="6.5" PointY="13.207021484375" />
+          <ConnectorPoint PointX="3.875" PointY="13.207021484375" />
+          <ConnectorPoint PointX="3.875" PointY="10.631653645833334" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.UserAccountCashClosureReceipt">
+          <ConnectorPoint PointX="5.75" PointY="9.7533268229166659" />
+          <ConnectorPoint PointX="5" PointY="9.7533268229166659" />
+        </AssociationConnector>
+        <AssociationConnector Association="TafelModel.PersonBooking">
+          <ConnectorPoint PointX="2.5" PointY="5.4408268229166667" />
+          <ConnectorPoint PointX="5.5" PointY="5.4408268229166667" />
+        </AssociationConnector>
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

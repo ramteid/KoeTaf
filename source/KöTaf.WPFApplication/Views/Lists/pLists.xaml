@@ -1,0 +1,14 @@
+﻿<local:KPage x:Class="KöTaf.WPFApplication.Views.Lists.pLists"
+      xmlns:local="clr-namespace:KöTaf.WPFApplication.Views"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+      Title="pStatistiken">
+
+    <StackPanel>
+        <Label Padding="0,5,5,5" Content="Bitte treffen Sie im Untermenü eine Auswahl." />
+    </StackPanel>
+    
+</local:KPage>

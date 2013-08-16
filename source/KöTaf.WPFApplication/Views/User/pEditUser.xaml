@@ -1,0 +1,34 @@
+﻿<local:KPage x:Class="KöTaf.WPFApplication.Views.User.pEditUser"
+    xmlns:local="clr-namespace:KöTaf.WPFApplication.Views"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    mc:Ignorable="d" 
+Title="pEditUser">
+
+    <WrapPanel>
+        <StackPanel>
+            <Label Content="Benutzername" />
+            <TextBox Name="tbBenutzername" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300" Margin="10,0,0,0" />
+            <Label Content="Passwort" />
+            <PasswordBox PasswordChar="*" Name="tbPasswort" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300" Margin="10,0,0,0" />
+            <Label Content="Passwort wiederholen" />
+            <PasswordBox PasswordChar="*" Name="tbPasswortConfirmation" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300" Margin="10,0,0,0" />
+            <WrapPanel Margin="0,10,0,10">
+                <Label Content="Administratorrechte" Margin="0,0,10,0"/>
+                <CheckBox Name="chkbIsAdmin" VerticalAlignment="Center" />
+            </WrapPanel>
+            <Label Content="Benutzerbild" />
+            <WrapPanel Margin="0,0,0,5">
+                <TextBox Name="tbImage" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300" Margin="10,0,0,0"/>
+                <Button Content="Durchsuchen" HorizontalAlignment="Left" Name="browse" VerticalAlignment="Top" Margin="10" Click="browse_Click" />
+            </WrapPanel>
+        </StackPanel>
+        <StackPanel>
+            <Label Content="Gewähltes Benutzerbild" />
+            <Image Name="userImage" MaxWidth="250" MaxHeight="250" />
+        </StackPanel>
+    </WrapPanel>
+    
+</local:KPage>

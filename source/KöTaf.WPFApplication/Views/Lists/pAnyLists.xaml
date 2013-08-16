@@ -1,0 +1,39 @@
+﻿<local:KPage
+      x:Class="KöTaf.WPFApplication.Views.Lists.pAnyLists"
+      xmlns:local="clr-namespace:KöTaf.WPFApplication.Views"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="" MinHeight="690" MinWidth="1145">
+    <Grid Name="gAnyStatistics">
+        <WrapPanel IsItemsHost="False" Margin="0,10,0,625" Name="wPFilter" VerticalAlignment="Stretch" Width="Auto" Height="Auto">
+            <ComboBox Margin="0,10,10,10" Name="cbStatus" Width="70" VerticalContentAlignment="Stretch">
+                <ComboBoxItem Content="Aktiv" IsSelected="True" />
+                <ComboBoxItem Content="Inaktiv" />
+                <ComboBoxItem Content="Alle" />
+            </ComboBox>
+            <ComboBox DropDownClosed="cbPerson_DropDownClosed" Margin="10" Name="cbPerson" Width="180" VerticalContentAlignment="Stretch" Padding="6,3">
+                <ComboBoxItem IsSelected="True" />
+                <ComboBoxItem Content="Ausweisinhaber" IsSelected="False" />
+                <ComboBoxItem Content="Partner" />
+                <ComboBoxItem Content="Kinder" />
+                <ComboBoxItem Content="Sponsoren" />
+            </ComboBox>
+            <ComboBox DropDownClosed="cbOther_DropDownClosed" IsEnabled="False" Margin="10" Name="cbOther" Width="140" VerticalContentAlignment="Stretch" Padding="6,3" />
+        </WrapPanel>
+        <DataGrid AutoGenerateColumns="False" ClipToBounds="False" HorizontalAlignment="Stretch" ItemsSource="{Binding}" Margin="-15,254,0,0" Name="dGAnyStatistics" VerticalAlignment="Stretch" Height="Auto" IsReadOnly="True">		
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}" >
+                    <Setter Property="FontWeight" Value="Bold" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+        </DataGrid>
+        <Button Click="bSearch_Click" Content="Suchen" HorizontalAlignment="Left" Margin="0,200,0,0" Name="bSearch" VerticalAlignment="Top" Width="75" IsEnabled="False" />
+        <Frame HorizontalAlignment="Left" Margin="-10,94,0,0" Padding="0" Name="fDisplayedData" VerticalAlignment="Top" Width="Auto" VerticalContentAlignment="Stretch"  HorizontalContentAlignment="Left"/>
+        <Button Content="Drucken" HorizontalAlignment="Left" Margin="100,200,0,0" Name="bPrint" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="bPrint_Click" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="200,200,0,0" Name="lCount" VerticalAlignment="Top" />
+    </Grid>
+</local:KPage>

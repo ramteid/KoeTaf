@@ -1,9 +1,0 @@
-C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.RandomGenerator\bin\Release\TafelDB.sdf
-C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.RandomGenerator\bin\Release\KöTaf.RandomGenerator.exe.config
-C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.RandomGenerator\bin\Release\KöTaf.RandomGenerator.exe
-C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.RandomGenerator\bin\Release\KöTaf.RandomGenerator.pdb
-C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.RandomGenerator\bin\Release\KöTaf.DataModel.dll
-C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.RandomGenerator\bin\Release\KöTaf.DataModel.pdb
-C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.RandomGenerator\obj\x86\Release\ResolveAssemblyReference.cache
-C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.RandomGenerator\obj\x86\Release\KöTaf.RandomGenerator.exe
-C:\Users\Dietmar\Desktop\KöTaf\src\KöTaf.RandomGenerator\obj\x86\Release\KöTaf.RandomGenerator.pdb

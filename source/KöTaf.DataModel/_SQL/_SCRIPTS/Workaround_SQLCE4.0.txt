@@ -1,0 +1,37 @@
+﻿---------------------------------------------------------------
+Autor: Florian Wasielewski
+---------------------------------------------------------------
+VisualStudio 2010 SQL 4.0 Fehler beim öffnen im Server-Explorer
+---------------------------------------------------------------
+Wenn ein Fehler im VS2010 auftaucht, muss man zuerst das ServicePack 1 für VS2010 installieren und dann über
+"Webplattform-Installer" die Pakete
+ - Microsoft SQL Server CE 4.0
+ - Microsoft VisualStudio 2010 SP 1 Tools for SQL Server installieren
+ Die URL lautet: http://msdn.microsoft.com/de-de/library/gg606540(v=vs.100).aspx
+
+---------------------------------------------------------------
+Entity Framework in Verbindung mit SQL CE 4.0
+---------------------------------------------------------------
+As a workaround, I am using the Generate Database Wizard to generate a a SQL Compact 3.5 script, which I am running against a blank SQL Compact 4.0 database created in the VS 2010 Solution Explorer. Here are the steps to accomplish that task:
+
+Step 1: Run the Generate Database Wizard. It prompts for the creation of a file on its first page, so have it create a SQL Compact 3.5 file. This file is a dummy, so it doesn't matter what you name it.
+
+Step 2: Complete the wizard to create the DDL script that will configure the new database.
+
+Step 3: Delete the dummy file created in Step 1.
+
+Step 4: Use VS 2010's Server Explorer to create the actual SQL Compact 4.0 file that you will use in your project.
+
+Step 5: The Generate Database Wizard places two references to SQL Compact "3.5" in the EDMX file; these references need to be changed to "4.0". Open the EDMX file in VS 2010's XML Editor (right-click and select 'Open With' to get to the XML Editor). Line 7 should contain the "3.5" references. Change these to "4.0" and save the file.
+
+Step 6: Open the generated EDMX.SQLCE script file in VS 2010. VS will indicate (via a banner across the botton of the work pane) that the script is disconnected. Right-click on the white space above the banner and select Connection > Connect in the context menu that appears. That brings up a connection dialog--use it to connect the script to the SQL Compact 4.0 database that you created in Step 4.
+
+Step 7: Right-click in the script white-space again and select Execute SQL from the context menu. The script will execute and you will get the usual results message in a pane below the script. Assuming successful execution, the database is then configured to match the Entity Data Model.
+
+Step 8: We also need to ensure the App.config/web.config is not pointing to the dummy file. If it is change it to the actual CE 4.0 file created in Step 4 above. Else we have trouble with regeneration of the script when we make change to the model. In the config file change 3.5 to 4.0 as well.
+
+At that point, you should be able to use Entity Framework 4 to work with your database.
+
+// **************************************************************************************************************
+// URL: http://stackoverflow.com/questions/5205280/entity-framework-4-and-sql-compact-4-how-to-generate-database
+// **************************************************************************************************************

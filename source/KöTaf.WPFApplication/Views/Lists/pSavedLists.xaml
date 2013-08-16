@@ -1,0 +1,30 @@
+﻿<local:KPage
+      x:Class="KöTaf.WPFApplication.Views.Lists.pSavedLists"
+      xmlns:local="clr-namespace:KöTaf.WPFApplication.Views"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="" MinHeight="690" MinWidth="1145">
+    <Grid Height="Auto" Name="gSavedFilters">
+        <WrapPanel Height="Auto" IsItemsHost="False" Margin="0,10,0,625" Name="wPSavedFilterSelection" VerticalAlignment="Stretch" Width="Auto">
+            <ComboBox DropDownClosed="cBSavedFilter_DropDownClosed" Margin="0,10,10,10" Name="cBSavedFilter" Width="500" VerticalContentAlignment="Stretch" Padding="6,3" DropDownOpened="cBSavedFilter_DropDownOpened">
+                <ComboBoxItem IsSelected="True" />
+            </ComboBox>
+            <Button Click="bDeleteSavedFilter_Click" Content="Löschen" IsEnabled="False" Margin="10" Name="bDeleteSavedFilter" Width="75" Padding="6,3" />
+        </WrapPanel>
+        <Button Content="Suchen" HorizontalAlignment="Left" IsEnabled="False" Margin="0,200,0,0" Name="bSearchSavedFilter" VerticalAlignment="Top" Width="75" Click="bSearchSavedFilter_Click" />
+        <DataGrid AutoGenerateColumns="False" ClipToBounds="False" HorizontalAlignment="Stretch" ItemsSource="{Binding}" Margin="-15,254,0,0" Name="dGSavedFilter" VerticalAlignment="Stretch" VerticalContentAlignment="Top" Width="Auto" IsReadOnly="True">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}" >
+                    <Setter Property="FontWeight" Value="Bold" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+        </DataGrid>
+        <Frame Height="Auto" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Margin="0,94,0,0" Name="fDisplayedData" VerticalAlignment="Top" VerticalContentAlignment="Stretch" Width="Auto" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="200,200,0,0" Name="lCount" VerticalAlignment="Top" />
+        <Button Content="Drucken" HorizontalAlignment="Left" IsEnabled="False" Margin="100,200,0,0" Name="bPrint" VerticalAlignment="Top" Width="75" Click="bPrint_Click" />
+    </Grid>
+</local:KPage>

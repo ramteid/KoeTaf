@@ -1,0 +1,10 @@
+﻿<local:KPage x:Class="KöTaf.WPFApplication.Views.Lists.pAccessDenied"
+      xmlns:local="clr-namespace:KöTaf.WPFApplication.Views"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+      Title="pStatistiken" VerticalAlignment="Top" HorizontalAlignment="Left">
+    <Label Content="Sie müssen als Administrator eingeloggt sein, um auf diese Seite zugreifen zu können!" Height="28" Name="label1" />
+</local:KPage>

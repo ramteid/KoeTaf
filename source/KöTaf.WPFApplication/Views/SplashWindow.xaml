@@ -1,0 +1,21 @@
+﻿<Window x:Class="KöTaf.WPFApplication.Views.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Visibility="Hidden"
+        Title="splash" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" Loaded="Window_Loaded" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="0" Width="0">
+    <Window.Resources>
+        <Storyboard x:Key="showStoryBoard">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="txtLoading">
+                <EasingThicknessKeyFrame KeyTime="0:0:0" Value="0,0,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,0,0,70"/>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+        
+        <Storyboard x:Key="HideStoryBoard">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="txtLoading">
+                <EasingThicknessKeyFrame KeyTime="0:0:0" Value="0,0,0,70"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:1" Value="0,0,0,150"/>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+</Window>

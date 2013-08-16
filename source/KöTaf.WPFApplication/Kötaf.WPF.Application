@@ -1,0 +1,825 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KöTaf.WPFApplication.App">
+    <Position X="19" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.MainWindow">
+    <Position X="7.75" Y="18.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>UBAAAAAABAAAgAhAAAAAAAgAAAAASEAAAEAAAAAAgAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Converter.ChildConverter" BaseTypeListCollapsed="true">
+    <Position X="23" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converter\ChildConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Converter.PersonStateConverter" BaseTypeListCollapsed="true">
+    <Position X="23" Y="23.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converter\PersonStateConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Converter.RevenueConverter" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converter\RevenueConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Helper.BookingsHelper">
+    <Position X="27" Y="11.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAJAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helper\BookingsHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Helper.CashClosureHelper">
+    <Position X="15.25" Y="13.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAACBAAAQAAAAAAIAAAAAgAAAAQAAAAAAAAAAEAEAA=</HashCode>
+      <FileName>Helper\CashClosureHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Helper.DataGridHelper">
+    <Position X="11.75" Y="28.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>RAAAABABAAIAAAAAAAAAACAAAAAAAgAAAAAABAAAAAA=</HashCode>
+      <FileName>Helper\DataGridHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Helper.DataGridPaging&lt;T&gt;">
+    <Position X="15.25" Y="24.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABwAAAEAABAAAAAAAAIAQCAAgIgBgAAIAIAAgCAA=</HashCode>
+      <FileName>Helper\DataGridPaging.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Helper.FormletterFilterData">
+    <Position X="11.75" Y="23.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAEACIAIAAAAgBFAAIAQAABIAEAAAEAAAACABAA=</HashCode>
+      <FileName>Helper\FormletterFilterData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Helper.GenericClassInstantiator&lt;T&gt;">
+    <Position X="27" Y="20.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Helper\GenericClassInstantiator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Helper.MessageBoxEnhanced">
+    <Position X="11.75" Y="20.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAIAAABAAAAAAQAAAAAAABAAAAAAAAAEAAAAAEAAAAA=</HashCode>
+      <FileName>Helper\MessageBoxEnhanced.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Helper.PrintForms">
+    <Position X="27" Y="13" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAIAAAAAIABAAAAAAAAEBAAAAAEAAAA=</HashCode>
+      <FileName>Helper\PrintForms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Helper.AccountZeroPeriodEnum">
+    <Position X="15.25" Y="17" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Models\AccountZeroPeriodEnum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.NegativeBooking">
+    <Position X="11.75" Y="31.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Helper\NegativeBooking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.AccountComboBoxModel">
+    <Position X="2.75" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Models\AccountComboBoxModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.AccountManagerDataGridModel">
+    <Position X="7.75" Y="11.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACACAAAAIAAACAAAEAAEAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\AccountManagerDataGridModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.AccountSearchComboBoxItemModel">
+    <Position X="15.25" Y="11.25" Width="2.75" />
+    <NestedTypes>
+      <Enum Name="KöTaf.WPFApplication.Models.AccountSearchComboBoxItemModel.Type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\AccountSearchComboBoxItemModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\AccountSearchComboBoxItemModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.BookingDataGridModel">
+    <Position X="23" Y="11.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAABBAAhAAATAAACKAAQAAACgAAAoAAAQAAAAQAAAQA=</HashCode>
+      <FileName>Models\BookingDataGridModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.BookingSumsSearchComboBoxItemModel">
+    <Position X="30.25" Y="11.25" Width="3" />
+    <NestedTypes>
+      <Enum Name="KöTaf.WPFApplication.Models.BookingSumsSearchComboBoxItemModel.Type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\BookingSumsSearchComboBoxItemModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\BookingSumsSearchComboBoxItemModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.CashClosureAccountsDataGridModel">
+    <Position X="11.75" Y="11.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAQAAACAAQEIAIAEAAAAAAAAEAAAAAAAAQAEAAAA=</HashCode>
+      <FileName>Models\CashClosureDataGridModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.CashClosureManagerDataGridModel">
+    <Position X="15.25" Y="19" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>QAQEBQABAAIAIgIAAAjAAAAAQACAABAAFAAAAIEAAAA=</HashCode>
+      <FileName>Models\CashClosureManagerDataGridModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.ChildModel">
+    <Position X="27" Y="24.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAIAAAAAAIAAAIQAAACAAAAAg=</HashCode>
+      <FileName>Models\ChildModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.ClientSearchComboBoxItemModel">
+    <Position X="30.25" Y="13.5" Width="2.5" />
+    <NestedTypes>
+      <Enum Name="KöTaf.WPFApplication.Models.ClientSearchComboBoxItemModel.Type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\ClientSearchComboBoxItemModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\ClientSearchComboBoxItemModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.ComboBoxItems">
+    <Position X="7.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Models\ComboBoxItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.FilterModel">
+    <Position X="27" Y="22" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="KöTaf.WPFApplication.Models.FilterModel.Groups" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\FilterModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="KöTaf.WPFApplication.Models.FilterModel.Criterions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\FilterModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="KöTaf.WPFApplication.Models.FilterModel.Operations" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\FilterModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAABAEAAAAAAAAAAAAACAAAAAAAAABAAA=</HashCode>
+      <FileName>Models\FilterModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.FilterSetModel">
+    <Position X="30.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAggAEAAAAAAAAAAAEAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Models\FilterSetModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.FilterSetModelDB">
+    <Position X="2.75" Y="17" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FilterSetModelDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.FormletterColumnCsvDocumentAssignment">
+    <Position X="7.75" Y="16.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\FormletterColumnCsvDocumentAssignment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.FormletterPatternItem">
+    <Position X="15.25" Y="29.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Models\FormletterPatternItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.FormletterPatternModelDB">
+    <Position X="19" Y="17.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAIQAkAAAAAAAACAAAAACBAAAEAIAAAACAAAAAEAA=</HashCode>
+      <FileName>Models\FormletterPatternModelDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.FormletterTableAssignment">
+    <Position X="23" Y="18.5" Width="3.25" />
+    <NestedTypes>
+      <Enum Name="KöTaf.WPFApplication.Models.FormletterTableAssignment.Groups" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\FormletterTableAssignment.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="KöTaf.WPFApplication.Models.FormletterTableAssignment.Fields" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\FormletterTableAssignment.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QACAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FormletterTableAssignment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.QuickBookingDataGridModel">
+    <Position X="30.25" Y="23.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>UAAAAAAAAABAAAAEEAAAAAAAAAAAggAAAIAACACAAEA=</HashCode>
+      <FileName>Models\QuickBookingDataGridModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.RevenueModel">
+    <Position X="11.75" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAEAAAAAAAQAAAAAARAAAJAAAAAA=</HashCode>
+      <FileName>Models\RevenueModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.CBItem">
+    <Position X="19" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RevenueModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.RevenueTypes">
+    <Position X="15.25" Y="31.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RevenueTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.SponsorSearchComboBoxItemModel">
+    <Position X="7.75" Y="30.75" Width="2.75" />
+    <NestedTypes>
+      <Enum Name="KöTaf.WPFApplication.Models.SponsorSearchComboBoxItemModel.Type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\SponsorSearchComboBoxItemModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\SponsorSearchComboBoxItemModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.TeamSearchComboBoxItemModel">
+    <Position X="27" Y="18" Width="2.5" />
+    <NestedTypes>
+      <Enum Name="KöTaf.WPFApplication.Models.TeamSearchComboBoxItemModel.Type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\TeamSearchComboBoxItemModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\TeamSearchComboBoxItemModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.UserAccountSearchComboBoxItemModel">
+    <Position X="7.75" Y="28.5" Width="3" />
+    <NestedTypes>
+      <Enum Name="KöTaf.WPFApplication.Models.UserAccountSearchComboBoxItemModel.Type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\UserAccountComboBoxItemModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\UserAccountComboBoxItemModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Models.UserModel">
+    <Position X="7.75" Y="24.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAEAAAAIAAAAAAAAACAQAAAAAAAAA=</HashCode>
+      <FileName>Models\UserModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.ViewModels.LoginViewModel">
+    <Position X="30.25" Y="18.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAMAAAAAAQAAAAAQAAARIAAACAQAAAQAAgAA=</HashCode>
+      <FileName>Models\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Properties.Resources">
+    <Position X="2.75" Y="18.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Properties.Settings">
+    <Position X="27" Y="15.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAIAAAAAABAAAAEAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Template.DateRangePanel">
+    <Position X="19" Y="14.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAABAAAAAAgAAACAAAAIAAAEAAQAAAAA=</HashCode>
+      <FileName>Template\DateRangePanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Template.Examples">
+    <Position X="3" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Template\Examples.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Template.ExtScrollViewer">
+    <Position X="23" Y="21" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAACAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Template\ExtScrollViewer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Template.PagingBar">
+    <Position X="19" Y="21.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAUEAEAAAOABAAAKAEAQAAEAAEAoAAAAACAAAAIAA=</HashCode>
+      <FileName>Template\PagingBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Template.ScrollableFrame">
+    <Position X="19" Y="27" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Template\ScrollableFrame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Template.SearchPanel">
+    <Position X="23" Y="24.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAEAAAAAAAgAAAQgAAAAAAjQAAAQAAAAA=</HashCode>
+      <FileName>Template\SearchPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Template.SimpleTabItem">
+    <Position X="30.25" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAEAAAAAAAAAAAAgAAAAAAAQAAAAA=</HashCode>
+      <FileName>Template\SimpleTabItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Template.SinglePage">
+    <Position X="2.75" Y="21.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Template\SinglePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Template.SubnavigationButton">
+    <Position X="11.75" Y="15" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAJAAFAAAAAAAAAIAAAAAEAEAAAAAAAA=</HashCode>
+      <FileName>Template\SubNavigationButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Template.SubnavigationContentSwitcher">
+    <Position X="19" Y="28.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAgAAADAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Template\SubnavigationContentSwitcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Template.SubnavigationPage">
+    <Position X="23" Y="28.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAADAIAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Template\SubnavigationPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Template.Toolbar">
+    <Position X="27" Y="27.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAIABAAIAAAAUAAABABQBwAggAAQGAAA=</HashCode>
+      <FileName>Template\Toolbar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Template.ButtonFunctionMapping">
+    <Position X="2.75" Y="13.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Template\Toolbar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Accounting.AccountManager.pAccountManager">
+    <Position X="16.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAiIgCAAAAAAAUIAAAAAIAAAAAAAKACCAQAQAA=</HashCode>
+      <FileName>Views\Accounting\AccountManager\pAccountManager.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Accounting.AccountManager.pEditAccount">
+    <Position X="26.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIEAQCAAgABCAAAAAAAAAAAAAAAAAAAAAECAIQAAAA=</HashCode>
+      <FileName>Views\Accounting\AccountManager\pEditAccount.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Accounting.AccountManager.pNewAccount">
+    <Position X="36.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIEAQCAAgABCAAAAAAAAAAAAAAAAAAAAAAAAIQAAAA=</HashCode>
+      <FileName>Views\Accounting\AccountManager\pNewAccount.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Accounting.Bookings.pBookings">
+    <Position X="46.5" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAiAACAAAAQEAEMAAAEAAAAAAABAIAADAQAQAA=</HashCode>
+      <FileName>Views\Accounting\Bookings\pBookings.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Accounting.Bookings.pEditBooking">
+    <Position X="59.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIEAACAAAABCAAAAAAAAAAAAAAAAQgAAAAEAIQAAAA=</HashCode>
+      <FileName>Views\Accounting\Bookings\pEditBooking.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Accounting.Bookings.pNewBooking">
+    <Position X="71.75" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAIEAACAAAABCAgAAAAAAAAAAAAAAAgAAAAAAIQAAAA=</HashCode>
+      <FileName>Views\Accounting\Bookings\pNewBooking.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Accounting.CashClosureManager.pCashClosureManager">
+    <Position X="81.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABABAAAQAAAAAAAAAAAAAAAAAIAAAAQEACA=</HashCode>
+      <FileName>Views\Accounting\CashClosureManager\pCashClosureManager.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Accounting.CashClosureManager.pNewCashClosure">
+    <Position X="95" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAIAAACAAAAAAACAAAAAAAAAAAAAAAgBAIAAAARAAAA=</HashCode>
+      <FileName>Views\Accounting\CashClosureManager\pCashClosureSubmit.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Accounting.QuickBooking.pQuickBooking">
+    <Position X="104.5" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABQAAAIAAEAQABAAAAAAAAAAAICAAAQSAAA=</HashCode>
+      <FileName>Views\Accounting\QuickBooking\pQuickBooking.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Accounting.Sums.pSums">
+    <Position X="115" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QJQAAAAAAAAAAABQAQEAAgAEIAAAAAkJAIEQAAQAAAA=</HashCode>
+      <FileName>Views\Accounting\Sums\pSums.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.pClientAdministration">
+    <Position X="5.25" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AJQEgEAqAACIAEACAAEIAAICcBAAABAAAAAKCAQQQAg=</HashCode>
+      <FileName>Views\Client\pClientAdministration.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.CloseProgram">
+    <Position X="2.75" Y="15.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Views\CloseProgram.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.KPage" Collapsed="true">
+    <Position X="52.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAQAAAAIAAAAAKAAAAABAAAAQAAAA=</HashCode>
+      <FileName>Views\KPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.LoginWindow">
+    <Position X="2.75" Y="23.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CIAAAAAAAAAAkAAAABAAAAAAEAAAAAAAAMAAAAAAAIA=</HashCode>
+      <FileName>Views\Login.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.pEditNote">
+    <Position X="49.25" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAIAAAAAAAAAAAAAAAAAAAAAAAIAACAAACACQAAAA=</HashCode>
+      <FileName>Views\Note\pEditNote.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.pNewNote">
+    <Position X="61.75" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAIAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAACQAAAA=</HashCode>
+      <FileName>Views\Note\pNewNote.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.pNoteAdministration">
+    <Position X="74.75" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAgAAYAAAECAAAAAAAAAACAAQAAAA=</HashCode>
+      <FileName>Views\Note\pNoteAdministration.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Print">
+    <Position X="84.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAEAAAAAAAAAIAAAAAAAAAAQAAAAAAAAAAgAAQAAAA=</HashCode>
+      <FileName>Views\Print.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.pWelcomeScreen">
+    <Position X="97.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Views\pWelcomeScreen.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Restore">
+    <Position X="107.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Views\Restore.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.SplashWindow">
+    <Position X="7.75" Y="26.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\SplashWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.pEditSponsor">
+    <Position X="8.25" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABCAAAAAEAAIAAAAAACAAAACAIIAAACAAQABAA=</HashCode>
+      <FileName>Views\Sponsor\pEditSponsor.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.pNewSponsor">
+    <Position X="18.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAEAAAAAAAAACAAAACAIIAAACAAQABAA=</HashCode>
+      <FileName>Views\Sponsor\pNewSponsor.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.pSponsorAdministration">
+    <Position X="29.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AJgAAAAiAACIABAAAAEIBAAAAAAAAAAAACACCAQAQAA=</HashCode>
+      <FileName>Views\Sponsor\pSponsorAdministration.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.pEditTeamMember">
+    <Position X="39.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAADCABAAAEAAAAAAAAACAAQACAAAAAACAAQABAA=</HashCode>
+      <FileName>Views\Team\pEditTeamMember.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.pNewTeamMember">
+    <Position X="52" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAEAAAAAAAAACAAQACAAAAAACCAQABAA=</HashCode>
+      <FileName>Views\Team\pNewTeamMember.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.pTeamAdministration">
+    <Position X="64.5" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABAgAAAiAACIAAAAACEIAAAAAIAAAAACACACCAQAQAA=</HashCode>
+      <FileName>Views\Team\pTeamAdministration.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.USB_Identification">
+    <Position X="2.75" Y="27" Width="4" />
+    <TypeIdentifier>
+      <HashCode>ARgAAAAARAAQAFAAAAIggAgAAiwAAABAEICAQDAAAQk=</HashCode>
+      <FileName>Views\USB_Identification.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Client.pEditClientPartnerChild">
+    <Position X="86.5" Y="2" Width="3" />
+    <TypeIdentifier>
+      <HashCode>ABACAgCAAIABAACBACAAAABCAAAEMAACAAACQAQAAAA=</HashCode>
+      <FileName>Views\Client\pEditClientPartnerChild.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Client.pEditClientPerson">
+    <Position X="99.5" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABCEAAAABCAABEEgAACBgSDEQAEAA=</HashCode>
+      <FileName>Views\Client\pEditClientPerson.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Client.pEditClientRevenues">
+    <Position X="109.75" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAABAAAAAAAAhCAACIQAAAAAMEBgCAoACAAQAECA=</HashCode>
+      <FileName>Views\Client\pEditClientRevenues.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Client.pNewClientPartnerChild">
+    <Position X="117.75" Y="2" Width="3" />
+    <TypeIdentifier>
+      <HashCode>ABAAAgCAAIABAAAAASAQAABCAAAEEAACAAACQAQAAAA=</HashCode>
+      <FileName>Views\Client\pNewClientPartnerChild.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Client.pNewClientPerson">
+    <Position X="10.75" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAACAAAAABCAABEEAAACBgSDEQEEAA=</HashCode>
+      <FileName>Views\Client\pNewClientPerson.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Client.pNewClientRevenues">
+    <Position X="21.25" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAABAAAAAAAAgCACCIQAAAAAMEBACAAACAAQAACA=</HashCode>
+      <FileName>Views\Client\pNewClientRevenues.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Formletter.pFormletterAdministration">
+    <Position X="31.5" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAIAAAAAAAAAAAAEQAAAAAQAAAA=</HashCode>
+      <FileName>Views\Formletter\pFormletterAdministration.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Formletter.pFormletterDelete">
+    <Position X="41.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAAAAAAQAAEA=</HashCode>
+      <FileName>Views\Formletter\pFormletterDelete.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Formletter.pFormletterFileLinking">
+    <Position X="54.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABABAAAAIAAAAAAhAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Views\Formletter\pFormletterFileLinking.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Formletter.pFormletterFilterSelection">
+    <Position X="67" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAIAAAAAABgAAAQARAAAACICQAAAyAwAoAA=</HashCode>
+      <FileName>Views\Formletter\pFormletterFilterSelection.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Formletter.pFormletterPrint">
+    <Position X="77" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAQAAAAAQAAAA=</HashCode>
+      <FileName>Views\Formletter\pFormletterPrint.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Formletter.pFormletterPrintDetail">
+    <Position X="89.75" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAAAAAAQAAEA=</HashCode>
+      <FileName>Views\Formletter\pFormletterPrintDetail.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Formletter.pFormletterTextFields">
+    <Position X="102.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Views\Formletter\pFormletterTextFields.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Lists.pAccessDenied">
+    <Position X="112.75" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Views\Lists\pAccessDenied.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Lists.pAnyLists">
+    <Position X="121" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AADAAAAgAIAAAgIAAAAQICAgMoAQABBAhEACIAYAwBA=</HashCode>
+      <FileName>Views\Lists\pAnyLists.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Lists.pDisplayedData">
+    <Position X="13.5" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAgAAAQAAAEAAAAAAAAAAAAAAAAQgAAAACAAQAABA=</HashCode>
+      <FileName>Views\Lists\pDisplayedData.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Lists.pLists">
+    <Position X="24.25" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAgAgAAAAAAAAAAEIAAABBAAAACAAQAgAA=</HashCode>
+      <FileName>Views\Lists\pLists.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Lists.pSavedLists">
+    <Position X="34" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAgBIAgAgAAAAQEAAAAAIAAABAAACAiAAYAgBI=</HashCode>
+      <FileName>Views\Lists\pSavedLists.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Statistic.OldpStatistiken">
+    <Position X="43.75" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAFACgQABADAEgKSQASQICA5IogRABAChMICIBQRwBI=</HashCode>
+      <FileName>Views\Statistic\OldpStatistiken.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.Statistic.pGeneralStatistic">
+    <Position X="57.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEACgAAAACAEACAQACAAAAAAAABAAACAIICABQRAAA=</HashCode>
+      <FileName>Views\Statistic\pGeneralStatistic.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.User.pEditUser">
+    <Position X="69.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIEBQCABAABCAAAAAAAAgAAAAAAAAAAAGACAIQABAA=</HashCode>
+      <FileName>Views\User\pEditUser.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.User.pNewUser">
+    <Position X="79.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIEBQCABAABCAAAAAAAAgAAAAAAAAAAAEAAAIQAAAA=</HashCode>
+      <FileName>Views\User\pNewUser.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KöTaf.WPFApplication.Views.User.pUserManager">
+    <Position X="92" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAigACQAAAAAAEIAAAAAAAACAAAAKAACAQAQAA=</HashCode>
+      <FileName>Views\User\pUserManager.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,49 @@
+﻿<local:KPage x:Class="KöTaf.WPFApplication.Views.Accounting.Sums.pSums"
+    xmlns:local="clr-namespace:KöTaf.WPFApplication.Views"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    mc:Ignorable="d" 
+             IsVisibleChanged="KPage_VisibleChanged"
+Title="pSums">
+    <Page.Resources>
+        <Style TargetType="DataGridCell" x:Key="ActiveCellStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" Margin="5,0,5,0" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    
+    <DockPanel HorizontalAlignment="Stretch">
+        <WrapPanel DockPanel.Dock="Top" Margin="0,10,0,10">
+            <Label Name="lbRevTitle" Content="Einnahmen:"/>
+            <Label Name="lbRevenues" Width="150"/>
+            <Label Name="lbExpTitle" Content="Ausgaben:"/>
+            <Label Name="lbExpenses" Width="150"/>
+            <Label Name="lbSumTitle" Content="Summe:"/>
+            <Label Name="lbSum" Width="150"/>
+            <Label Name="lbLatestBalanceTitle" Content="letzte Bilanz:"/>
+            <Label Name="lbLatestBalance" Width="150"/>
+        </WrapPanel>
+
+        <DataGrid AutoGenerateColumns="False" Margin="-15,0,0,0" x:Name="SumsDataGrid" CanUserResizeRows="False" HorizontalGridLinesBrush="LightGray" Background="White" AlternatingRowBackground="#FFF2F2F2" VerticalContentAlignment="Center"  IsReadOnly="True" VerticalScrollBarVisibility="Hidden" VerticalGridLinesBrush="{x:Null}" HorizontalAlignment="Stretch">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" x:Name="ID" Binding="{Binding Path=bookingID}" CellStyle="{StaticResource ActiveCellStyle}"  />
+                <DataGridTextColumn Header="Datum" x:Name="Date" Binding="{Binding Path=dateString}"  />
+                <DataGridTextColumn Header="Quellkonto" x:Name="SourceAccount" Binding="{Binding Path=sourceAccountString}" CellStyle="{StaticResource ActiveCellStyle}"  />
+                <DataGridTextColumn Header="Zielkonto" x:Name="TargetAccount" Binding="{Binding Path=targetAccountString}" CellStyle="{StaticResource ActiveCellStyle}"  />
+                <DataGridTextColumn Header="Betrag" x:Name="Amount" Binding="{Binding Path=amount}" CellStyle="{StaticResource ActiveCellStyle}"  />
+                <DataGridTextColumn Header="Beschreibung" x:Name="Description" Binding="{Binding Path=description}" CellStyle="{StaticResource ActiveCellStyle}"  />
+                <DataGridTextColumn Header="Benutzer" x:Name="UserAccount" Binding="{Binding Path=user}" CellStyle="{StaticResource ActiveCellStyle}"  />
+                <DataGridTextColumn Header="Kunde" x:Name="Customer" Binding="{Binding Path=customer}" CellStyle="{StaticResource ActiveCellStyle}"  />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</local:KPage>

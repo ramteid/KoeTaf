@@ -1,0 +1,52 @@
+﻿<local:KPage x:Class="KöTaf.WPFApplication.Views.Accounting.QuickBooking.pQuickBooking"
+    xmlns:local="clr-namespace:KöTaf.WPFApplication.Views"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+             IsVisibleChanged="KPage_VisibleChanged"
+	Title="pQuickBooking">
+    <Page.Resources>
+        <Style TargetType="DataGridCell" x:Key="ActiveCellStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" Margin="5,0,5,0" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    
+<DockPanel HorizontalAlignment="Stretch">
+        <DataGrid AutoGenerateColumns="False" IsSynchronizedWithCurrentItem="True" x:Name="QuickBookingDataGrid" Margin="-15,0,0,0" CanUserResizeRows="False" HorizontalGridLinesBrush="LightGray" Background="White" AlternatingRowBackground="#FFF2F2F2" VerticalContentAlignment="Center"  IsReadOnly="True" VerticalScrollBarVisibility="Hidden" VerticalGridLinesBrush="{x:Null}" HorizontalAlignment="Stretch">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader" >
+                    <Setter Property="FontWeight" Value="Bold" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Gruppe" x:Name="Group" Binding="{Binding Path=group}" CellStyle="{StaticResource ActiveCellStyle}"/>
+                <DataGridTextColumn Header="AusweisNr" x:Name="TableNo" Binding="{Binding Path=tableNo}" CellStyle="{StaticResource ActiveCellStyle}" />
+                <DataGridTextColumn Header="Nachname" x:Name="LastName" Binding="{Binding Path=lastName}" CellStyle="{StaticResource ActiveCellStyle}" />
+                <DataGridTextColumn Header="Vorname" x:Name="firstName" Binding="{Binding Path=firstName}" CellStyle="{StaticResource ActiveCellStyle}" />
+
+                <DataGridTemplateColumn Header="Betrag" CellStyle="{StaticResource ActiveCellStyle}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox x:Name="tbAmount" TabIndex="0" Text="{Binding Path=amount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn Header="Ausweis gültig bis" x:Name="ValidityEnd" Binding="{Binding Path=validityEnd}" CellStyle="{StaticResource ActiveCellStyle}"  />
+                <DataGridTextColumn Header="Geburtstag" x:Name="DateOfBirth" Binding="{Binding Path=dateOfBirth}" CellStyle="{StaticResource ActiveCellStyle}"  />
+                <DataGridTextColumn Header="Letzter Einkauf" x:Name="lastPurchase" Binding="{Binding Path=lastPurchase}" CellStyle="{StaticResource ActiveCellStyle}"  />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+    
+</local:KPage>

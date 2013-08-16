@@ -1,0 +1,52 @@
+﻿<Window x:Class="KöTaf.WPFApplication.Views.LoginWindow" x:Name="RootWindow"
+		  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		  xmlns:wpfsl="http://schemas.softarcs.com/wpfsmartlibrary"
+		    wpfsl:WindowKeysHandling.EscapeClosesWindow="False"
+            
+          ResizeMode="NoResize" Closing="Window_Closing"    
+		  WindowStartupLocation="CenterScreen" Background="DarkBlue"
+		  Title="KöTaf - ANMELDUNG" MinWidth="400" MinHeight="450"
+          WindowStyle="None"  AllowsTransparency="False" Icon="/KöTaf.WPFApplication;component/Images/logo.ico" mc:Ignorable="d" Loaded="RootWindow_Loaded" d:DesignHeight="562" d:DesignWidth="630" SizeToContent="WidthAndHeight">
+
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="/WPFSmartLibraryLight35;component/ResourceDictionaries/CommonRD.xaml" />
+				<ResourceDictionary Source="../ResourceDictionaries/LoginDialogRD.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
+	<Grid x:Name="LayoutRoot" Background="#FF4C4C6C" Height="522" Width="608">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.044*" />
+            <ColumnDefinition Width="0.956*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+        </Grid.RowDefinitions>
+        <wpfsl:SmartLoginOverlay x:Name="SmartLoginOverlayControl" 
+                                         UserNameWatermark="Benutzername"
+										 FullSpan="ON" 
+                                         Watermark="Passwort"
+                                         Language="de-DE"
+                                         WrongCredentialsInfo="Falsche Anmeldeinformationen! Versuchen Sie es erneut."
+                                         IsUserOptionAvailable="True"
+                                         UserName="{Binding UserName}"
+										 Password="{Binding Password}"
+                                         UserImageSource="{Binding UserImageSource}"
+                                         CapsLockInfo="Feststelltaste ist aktiviert"
+                                         NoCredentialsInfo="Falsche Anmeldeinformationen! Versuchen Sie es erneut."
+                                         AdditionalUserInfo="sdsd"
+                                         AdditionalSystemInfo="Bitte melden Sie sich an!"
+										 Command="{Binding SubmitCommand}"
+										 CommandParameter="{Binding RelativeSource={RelativeSource Self} }" Margin="-3,151,0,74" Loaded="SmartLoginOverlayControl_Loaded" Background="#FF6C9BD2" Grid.ColumnSpan="2" />
+		<Label FontSize="9" Name="lbCreatedBy"
+				 HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White"
+				 Content="" Margin="289,0,-7,2" Grid.Column="1" Height="24" />
+        <Label Content="" HorizontalAlignment="Left" Margin="4.696,158,0,320" Name="label2" Width="265" Foreground="#FFA0E6FF" Grid.Column="1" FontWeight="Normal" FontSize="20"></Label>
+        <Button Content="Programm beenden" Background="AliceBlue" Height="23" HorizontalAlignment="Left" Margin="439.696,467,0,0" Name="button1" VerticalAlignment="Top" Width="129" Click="pbClose_Click" Grid.Column="1" />
+        <Image Height="152" Source="/KöTaf.WPFApplication;component/Images/KT_Login_Logo.jpg" Stretch="Fill" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+    </Grid>
+</Window>

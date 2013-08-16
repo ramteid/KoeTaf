@@ -1,0 +1,68 @@
+﻿<local:KPage x:Class="KöTaf.WPFApplication.Views.Accounting.AccountManager.pAccountManager"
+    xmlns:local="clr-namespace:KöTaf.WPFApplication.Views"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    mc:Ignorable="d" 
+             IsVisibleChanged="KPage_VisibleChanged"
+Title="pAccountManager">
+    <Page.Resources>
+        <Style TargetType="DataGridCell" x:Key="ActiveCellStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" Margin="5,0,5,0" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    
+    <DockPanel HorizontalAlignment="Stretch">
+        <DataGrid AutoGenerateColumns="False" x:Name="AccountDataGrid" Margin="-15,0,0,0" CanUserResizeRows="False" HorizontalGridLinesBrush="LightGray" Background="White" AlternatingRowBackground="#FFF2F2F2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsReadOnly="True" VerticalScrollBarVisibility="Hidden" VerticalGridLinesBrush="{x:Null}" HorizontalAlignment="Stretch">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader" >
+                    <Setter Property="FontWeight" Value="Bold" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Kontobezeichnung" x:Name="Kontobezeichnung" Binding="{Binding Path=accountName}" CellStyle="{StaticResource ActiveCellStyle}"/>
+                <DataGridTextColumn Header="Kontonummer" x:Name="Kontonummer" Binding="{Binding Path=accountNumber}" CellStyle="{StaticResource ActiveCellStyle}" />
+                <DataGridTextColumn Header="Beschreibung" x:Name="Description" Binding="{Binding Path=description}" CellStyle="{StaticResource ActiveCellStyle}" />
+                <DataGridTextColumn Header="Offizell" x:Name="IsOfficial" Binding="{Binding Path=isOfficial}" CellStyle="{StaticResource ActiveCellStyle}" />
+                <DataGridTextColumn Header="Eigenkapital" x:Name="IsCapital" Binding="{Binding Path=isCapital}" CellStyle="{StaticResource ActiveCellStyle}" />
+                <DataGridTextColumn Header="Nullzyklus" x:Name="ZeroPeriod" Binding="{Binding Path=zeroPeriod}" CellStyle="{StaticResource ActiveCellStyle}" />
+                <DataGridTextColumn Header="Fixkonto" x:Name="IsFixed" Binding="{Binding Path=isFixed}" CellStyle="{StaticResource ActiveCellStyle}" />
+                <DataGridTemplateColumn Header="" Width="150" CanUserReorder="False" CanUserResize="False">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="pbEdit" Click="pbEdit_Click"  ToolTip="Konto bearbeiten" Background="Transparent" Cursor="Hand" Visibility="{Binding Path=visibilityEdit}" CommandParameter="{Binding Path=accountID}">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Border HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                <Image Source="/Images/edit.png"  Width="24" Height="24" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                                <Button x:Name="pbDelete" Click="pbDelete_Click"  ToolTip="Konto löschen" Background="Transparent" Cursor="Hand" Visibility="{Binding Path=visibilityDelete}" CommandParameter="{Binding Path=accountID}">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Border HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                <Image Source="/Images/delete.png"  Width="24" Height="24" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</local:KPage>
